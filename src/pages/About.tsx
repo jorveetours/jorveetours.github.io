@@ -144,54 +144,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="team-section section">
-        <div className="container">
-          <div className="section-title">
-            <h2>Meet Our Team</h2>
-            <p>The passionate people behind your extraordinary journeys</p>
-            <div className="underline"></div>
-          </div>
-
-          <div className="team-grid">
-            <div className="team-card">
-              <div className="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
-                  alt="Rajesh Kumar"
-                />
-              </div>
-              <div className="card-info">
-                <h3>Rajesh Kumar</h3>
-                <p className="role">Founder & CEO</p>
-              </div>
-            </div>
-            <div className="team-card">
-              <div className="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
-                  alt="Sarah Mitchell"
-                />
-              </div>
-              <div className="card-info">
-                <h3>Sarah Mitchell</h3>
-                <p className="role">Head of Operations</p>
-              </div>
-            </div>
-            <div className="team-card">
-              <div className="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80"
-                  alt="David Chen"
-                />
-              </div>
-              <div className="card-info">
-                <h3>David Chen</h3>
-                <p className="role">Travel Experience Director</p>
-              </div>
-            </div>
-          </div>
+      {/* Marquee Quote */}
+      <section style={{ overflow: 'hidden', padding: '60px 0', background: '#f8f9fa' }}>
+        <div style={{
+          display: 'flex',
+          whiteSpace: 'nowrap',
+          animation: 'marquee 20s linear infinite',
+        }}>
+          <span style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: 'clamp(3rem, 8vw, 7rem)',
+            fontWeight: 700,
+            color: 'rgba(0,0,0,0.06)',
+            textTransform: 'uppercase',
+            letterSpacing: '4px',
+            paddingRight: '100px',
+          }}>
+            Travel is important to learn the world around you &nbsp;•&nbsp; Travel is important to learn the world around you &nbsp;•&nbsp;
+          </span>
         </div>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
       </section>
     </div>
   );
