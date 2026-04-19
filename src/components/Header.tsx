@@ -33,7 +33,7 @@ export default function Header() {
           <Link to="/" className={isActive('/')}>Home</Link>
           <Link to="/destinations" className={isActive('/destinations')}>Destinations</Link>
           <Link to="/about" className={isActive('/about')}>About Us</Link>
-          <Link to="/#contact" className="nav-cta">Contact Us</Link>
+          <Link to="/#contact" className={isActive('/#contact')}>Contact Us</Link>
         </nav>
 
         <button

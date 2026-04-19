@@ -71,7 +71,7 @@ export default function Footer() {
             </div>
             <div className="info">
               <h5>Address</h5>
-              <p>42 Wanderlust Avenue, Suite 200<br />New York, NY 10001, USA</p>
+              <p>Jasola, New Delhi 110025</p>
             </div>
           </div>
           <div className="office-item">
@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
             <div className="info">
               <h5>Phone</h5>
-              <p>+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+              <p>+91 9873440127<br />+91 8860821547</p>
             </div>
           </div>
           <div className="office-item">
