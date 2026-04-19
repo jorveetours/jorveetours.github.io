@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jorvee Tours & Travels</title>
+    <title>Page Not Found | Jorvee Tours & Travels</title>
+    <script>
+      // Redirect to the SPA — GitHub Pages serves 404.html for unknown paths
+      // This preserves the URL so React Router can handle it
+      var path = window.location.pathname;
+      if (path !== '/' && path !== '/index.html') {
+        sessionStorage.setItem('redirect', path);
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <script type="module" crossorigin src="/assets/index-BEvrIKdn.js"></script>
