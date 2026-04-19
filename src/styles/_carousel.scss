@@ -1,0 +1,162 @@
+@use 'variables' as *;
+
+.carousel {
+  position: relative;
+  height: 85vh;
+  min-height: 550px;
+  max-height: 800px;
+  overflow: hidden;
+  margin-top: 70px;
+
+  @media (max-width: $tablet) {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-size: cover;
+    background-position: center;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba($dark, 0.65) 0%,
+        rgba($primary-dark, 0.4) 50%,
+        rgba($dark, 0.55) 100%
+      );
+    }
+  }
+
+  .slide-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    padding: 0 20px;
+    z-index: 2;
+
+    .tagline {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+      color: $secondary;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: $font-heading;
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 20px;
+      max-width: 800px;
+      line-height: 1.2;
+
+      @media (max-width: $tablet) {
+        font-size: 2.2rem;
+      }
+    }
+
+    p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin-bottom: 32px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .carousel-buttons {
+      display: flex;
+      gap: 16px;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .carousel-nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+
+    button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid $white;
+      background: transparent;
+      cursor: pointer;
+      transition: $transition;
+      padding: 0;
+
+      &.active {
+        background: $secondary;
+        border-color: $secondary;
+        width: 32px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba($white, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba($white, 0.2);
+    color: $white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: $transition;
+    font-size: 1.1rem;
+
+    &:hover {
+      background: rgba($white, 0.3);
+    }
+
+    &.prev {
+      left: 24px;
+    }
+
+    &.next {
+      right: 24px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
+
+      &.prev { left: 12px; }
+      &.next { right: 12px; }
+    }
+  }
+}

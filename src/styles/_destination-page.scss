@@ -1,0 +1,516 @@
+@use 'variables' as *;
+
+.destination-page {
+  margin-top: 70px;
+
+  // Hero
+  .dest-hero {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: $tablet) {
+      height: 380px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba($dark, 0.85) 0%,
+        rgba($dark, 0.3) 50%,
+        rgba($dark, 0.15) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: $container-width;
+      margin: 0 auto;
+      padding: 0 20px 50px;
+      width: 100%;
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: rgba($white, 0.7);
+        margin-bottom: 16px;
+
+        a {
+          color: rgba($white, 0.7);
+          &:hover { color: $secondary; }
+        }
+
+        span { color: $secondary; }
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        color: $white;
+        margin-bottom: 12px;
+
+        @media (max-width: $tablet) {
+          font-size: 2.2rem;
+        }
+      }
+
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: rgba($white, 0.8);
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+
+        .meta-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          i {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  // Content area
+  .dest-content {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 60px 20px;
+
+    @media (max-width: $tablet) {
+      padding: 40px 16px;
+    }
+  }
+
+  // About city
+  .dest-about {
+    margin-bottom: 60px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      i {
+        color: $secondary;
+        font-size: 1.5rem;
+      }
+    }
+
+    .about-text {
+      color: $text-light;
+      line-height: 1.9;
+      font-size: 1.05rem;
+
+      p {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  // History
+  .dest-history {
+    background: $light-bg;
+    border-radius: $radius-xl;
+    padding: 48px;
+    margin-bottom: 60px;
+
+    @media (max-width: $tablet) {
+      padding: 28px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      i {
+        color: $secondary;
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      color: $text-light;
+      line-height: 1.9;
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+  }
+
+  // Gallery
+  .dest-gallery {
+    margin-bottom: 60px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      i {
+        color: $secondary;
+        font-size: 1.5rem;
+      }
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        border-radius: $radius-lg;
+        overflow: hidden;
+        height: 240px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: $transition-slow;
+        }
+
+        &:hover img {
+          transform: scale(1.08);
+        }
+
+        .gallery-caption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 16px;
+          background: linear-gradient(to top, rgba($dark, 0.8), transparent);
+          color: $white;
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // Info grid (places, food, must see)
+  .dest-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .info-card {
+    background: $white;
+    border: 1px solid $border;
+    border-radius: $radius-xl;
+    padding: 36px;
+    transition: $transition;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      border-color: transparent;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: $secondary;
+      }
+    }
+
+    ul {
+      li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba($border, 0.5);
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: $text-light;
+        font-size: 0.95rem;
+        line-height: 1.5;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        i {
+          color: $accent;
+          margin-top: 4px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  // Travel info
+  .dest-travel-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    .travel-card {
+      background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+      color: $white;
+      border-radius: $radius-xl;
+      padding: 32px;
+      text-align: center;
+
+      .icon {
+        width: 56px;
+        height: 56px;
+        background: rgba($white, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-family: $font-body;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $white;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // Sister cities
+  .sister-cities {
+    background: $light-bg;
+    border-radius: $radius-xl;
+    padding: 48px;
+    margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      padding: 28px 16px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .sister-subtitle {
+      text-align: center;
+      color: $text-light;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+
+    .sister-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @media (max-width: $desktop) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sister-card {
+      position: relative;
+      border-radius: $radius-lg;
+      overflow: hidden;
+      height: 220px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: $shadow-hover;
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition-slow;
+      }
+
+      .sister-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba($dark, 0.8) 0%, transparent 60%);
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+
+        .sister-info {
+          color: $white;
+
+          h4 {
+            font-family: $font-heading;
+            font-size: 1.2rem;
+            color: $white;
+          }
+
+          span {
+            font-size: 0.8rem;
+            color: $secondary;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Destinations directory
+.destinations-directory {
+  margin-top: 70px;
+
+  .directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    @media (max-width: $desktop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .directory-card {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    background: $white;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-hover;
+
+      .card-image img {
+        transform: scale(1.08);
+      }
+    }
+
+    .card-image {
+      height: 220px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition-slow;
+      }
+    }
+
+    .card-body {
+      padding: 24px;
+
+      .card-country {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $secondary;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $text-light;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid $border;
+        font-size: 0.85rem;
+        color: $text-muted;
+
+        .explore-link {
+          color: $primary;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

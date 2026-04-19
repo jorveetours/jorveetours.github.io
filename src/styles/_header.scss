@@ -1,0 +1,159 @@
+@use 'variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $white;
+  box-shadow: $shadow-sm;
+  transition: $transition;
+
+  &.scrolled {
+    box-shadow: $shadow-md;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary;
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, $primary, $secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: 1.1rem;
+    }
+
+    span {
+      color: $secondary;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      background: $white;
+      padding: 40px 20px;
+      gap: 24px;
+      transform: translateX(100%);
+      transition: $transition;
+      box-shadow: $shadow-lg;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    a {
+      font-weight: 500;
+      color: $text;
+      position: relative;
+      padding: 4px 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $secondary;
+        transition: $transition;
+      }
+
+      &:hover,
+      &.active {
+        color: $primary;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .nav-cta {
+    padding: 8px 20px;
+    background: $secondary;
+    color: $white !important;
+    border-radius: $radius-md;
+    font-weight: 600;
+
+    &::after {
+      display: none !important;
+    }
+
+    &:hover {
+      background: $secondary-dark;
+      transform: translateY(-1px);
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+
+    span {
+      width: 24px;
+      height: 2px;
+      background: $dark;
+      transition: $transition;
+      border-radius: 2px;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+}

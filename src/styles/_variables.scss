@@ -1,0 +1,46 @@
+// Colors
+$primary: #1a73a7;
+$primary-dark: #0f5a8a;
+$primary-light: #e8f4fc;
+$secondary: #e67e22;
+$secondary-dark: #d35400;
+$accent: #2ecc71;
+$dark: #1a1a2e;
+$dark-lighter: #16213e;
+$text: #333333;
+$text-light: #666666;
+$text-muted: #999999;
+$white: #ffffff;
+$light-bg: #f8f9fa;
+$border: #e0e0e0;
+$overlay: rgba(0, 0, 0, 0.5);
+
+// Fonts
+$font-heading: 'Playfair Display', Georgia, serif;
+$font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$wide: 1200px;
+
+// Spacing
+$section-padding: 80px 0;
+$container-width: 1200px;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+$shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.2);
+
+// Transitions
+$transition: all 0.3s ease;
+$transition-slow: all 0.5s ease;
+
+// Border radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-xl: 24px;
