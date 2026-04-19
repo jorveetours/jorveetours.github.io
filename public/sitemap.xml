@@ -6,52 +6,52 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/about</loc>
+    <loc>https://jorveetours.github.io/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations</loc>
+    <loc>https://jorveetours.github.io/destinations</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/paris</loc>
+    <loc>https://jorveetours.github.io/destinations/france/paris</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/tokyo</loc>
+    <loc>https://jorveetours.github.io/destinations/japan/tokyo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/rome</loc>
+    <loc>https://jorveetours.github.io/destinations/italy/rome</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/london</loc>
+    <loc>https://jorveetours.github.io/destinations/united-kingdom/london</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/dubai</loc>
+    <loc>https://jorveetours.github.io/destinations/uae/dubai</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/new-york</loc>
+    <loc>https://jorveetours.github.io/destinations/usa/new-york</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/istanbul</loc>
+    <loc>https://jorveetours.github.io/destinations/turkey/istanbul</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jorveetours.github.io/#/destinations/sydney</loc>
+    <loc>https://jorveetours.github.io/destinations/australia/sydney</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

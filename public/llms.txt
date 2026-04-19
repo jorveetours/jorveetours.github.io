@@ -13,19 +13,19 @@
 ## Pages
 
 - Home: https://jorveetours.github.io/
-- About Us: https://jorveetours.github.io/#/about
-- Destinations Directory: https://jorveetours.github.io/#/destinations
+- About Us: https://jorveetours.github.io/about
+- Destinations Directory: https://jorveetours.github.io/destinations
 
 ## Destinations
 
-- Paris, France: https://jorveetours.github.io/#/destinations/paris
-- Tokyo, Japan: https://jorveetours.github.io/#/destinations/tokyo
-- Rome, Italy: https://jorveetours.github.io/#/destinations/rome
-- London, United Kingdom: https://jorveetours.github.io/#/destinations/london
-- Dubai, UAE: https://jorveetours.github.io/#/destinations/dubai
-- New York City, USA: https://jorveetours.github.io/#/destinations/new-york
-- Istanbul, Turkey: https://jorveetours.github.io/#/destinations/istanbul
-- Sydney, Australia: https://jorveetours.github.io/#/destinations/sydney
+- Paris, France: https://jorveetours.github.io/destinations/france/paris
+- Tokyo, Japan: https://jorveetours.github.io/destinations/japan/tokyo
+- Rome, Italy: https://jorveetours.github.io/destinations/italy/rome
+- London, United Kingdom: https://jorveetours.github.io/destinations/united-kingdom/london
+- Dubai, UAE: https://jorveetours.github.io/destinations/uae/dubai
+- New York City, USA: https://jorveetours.github.io/destinations/usa/new-york
+- Istanbul, Turkey: https://jorveetours.github.io/destinations/turkey/istanbul
+- Sydney, Australia: https://jorveetours.github.io/destinations/australia/sydney
 
 ## Services
 - Group Tours
