@@ -40,12 +40,12 @@ export default function Footer() {
         <div className="footer-column">
           <h4>Destinations</h4>
           <ul>
-            <li><Link to="/destinations/paris"><i className="fas fa-chevron-right"></i> Paris</Link></li>
-            <li><Link to="/destinations/tokyo"><i className="fas fa-chevron-right"></i> Tokyo</Link></li>
-            <li><Link to="/destinations/rome"><i className="fas fa-chevron-right"></i> Rome</Link></li>
-            <li><Link to="/destinations/london"><i className="fas fa-chevron-right"></i> London</Link></li>
-            <li><Link to="/destinations/dubai"><i className="fas fa-chevron-right"></i> Dubai</Link></li>
-            <li><Link to="/destinations/new-york"><i className="fas fa-chevron-right"></i> New York</Link></li>
+            <li><Link to="/destinations/france/paris"><i className="fas fa-chevron-right"></i> Paris</Link></li>
+            <li><Link to="/destinations/japan/tokyo"><i className="fas fa-chevron-right"></i> Tokyo</Link></li>
+            <li><Link to="/destinations/italy/rome"><i className="fas fa-chevron-right"></i> Rome</Link></li>
+            <li><Link to="/destinations/united-kingdom/london"><i className="fas fa-chevron-right"></i> London</Link></li>
+            <li><Link to="/destinations/uae/dubai"><i className="fas fa-chevron-right"></i> Dubai</Link></li>
+            <li><Link to="/destinations/usa/new-york"><i className="fas fa-chevron-right"></i> New York</Link></li>
           </ul>
         </div>
 

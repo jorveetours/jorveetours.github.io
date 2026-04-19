@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
-import { destinations } from '../data/destinations';
+import { destinations, getDestinationPath } from '../data/destinations';
+import SEO from '../components/SEO';
 
 export default function Destinations() {
   return (
     <div className="destinations-directory">
+      <SEO
+        title="Explore World Destinations"
+        description="Discover Paris, Tokyo, Rome, London, Dubai, New York, Istanbul, Sydney and more iconic destinations with Jorvee Tours & Travels."
+        path="/destinations"
+      />
       {/* Hero */}
       <div
         className="page-hero"
@@ -30,7 +36,7 @@ export default function Destinations() {
           <div className="directory-grid">
             {destinations.map((dest) => (
               <Link
-                to={`/destinations/${dest.slug}`}
+                to={getDestinationPath(dest)}
                 key={dest.slug}
                 className="directory-card"
               >

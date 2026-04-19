@@ -1,9 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
-import { getDestination, getSisterCities } from '../data/destinations';
+import { getDestination, getSisterCities, getDestinationPath } from '../data/destinations';
+import SEO from '../components/SEO';
 
 export default function DestinationDetail() {
-  const { slug } = useParams<{ slug: string }>();
-  const dest = getDestination(slug || '');
+  const { countrySlug, slug } = useParams<{ countrySlug: string; slug: string }>();
+  const dest = getDestination(countrySlug || '', slug || '');
 
   if (!dest) {
     return (
@@ -21,6 +22,27 @@ export default function DestinationDetail() {
 
   return (
     <div className="destination-page">
+      <SEO
+        title={`${dest.name}, ${dest.country} — Travel Guide`}
+        description={dest.description}
+        path={getDestinationPath(dest)}
+        image={dest.heroImage.startsWith('http') ? dest.heroImage : dest.heroImage}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'TouristDestination',
+          name: dest.name,
+          description: dest.description,
+          image: dest.heroImage.startsWith('http') ? dest.heroImage : `https://jorveetours.github.io${dest.heroImage}`,
+          url: `https://jorveetours.github.io${getDestinationPath(dest)}`,
+          containedInPlace: { '@type': 'Country', name: dest.country },
+          touristType: 'Sightseeing',
+          provider: {
+            '@type': 'TravelAgency',
+            name: 'Jorvee Tours & Travels',
+            url: 'https://jorveetours.github.io',
+          },
+        }}
+      />
       {/* Hero */}
       <div
         className="dest-hero"
@@ -31,6 +53,8 @@ export default function DestinationDetail() {
             <Link to="/">Home</Link>
             <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
             <Link to="/destinations">Destinations</Link>
+            <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
+            <span>{dest.country}</span>
             <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
             <span>{dest.name}</span>
           </div>
@@ -148,7 +172,7 @@ export default function DestinationDetail() {
             <div className="sister-grid">
               {sisters.map((city) => (
                 <Link
-                  to={`/destinations/${city.slug}`}
+                  to={getDestinationPath(city)}
                   key={city.slug}
                   className="sister-card"
                 >

@@ -1,5 +1,6 @@
 export interface Destination {
   slug: string;
+  countrySlug: string;
   name: string;
   country: string;
   tagline: string;
@@ -19,6 +20,7 @@ export interface Destination {
 export const destinations: Destination[] = [
   {
     slug: 'paris',
+    countrySlug: 'france',
     name: 'Paris',
     country: 'France',
     tagline: 'The City of Light',
@@ -67,6 +69,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'tokyo',
+    countrySlug: 'japan',
     name: 'Tokyo',
     country: 'Japan',
     tagline: 'Where Tradition Meets Tomorrow',
@@ -115,6 +118,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'rome',
+    countrySlug: 'italy',
     name: 'Rome',
     country: 'Italy',
     tagline: 'The Eternal City',
@@ -163,6 +167,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'london',
+    countrySlug: 'united-kingdom',
     name: 'London',
     country: 'United Kingdom',
     tagline: 'A City Steeped in History',
@@ -211,6 +216,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'dubai',
+    countrySlug: 'uae',
     name: 'Dubai',
     country: 'United Arab Emirates',
     tagline: 'City of the Future',
@@ -259,6 +265,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'new-york',
+    countrySlug: 'usa',
     name: 'New York City',
     country: 'United States',
     tagline: 'The City That Never Sleeps',
@@ -307,6 +314,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'istanbul',
+    countrySlug: 'turkey',
     name: 'Istanbul',
     country: 'Turkey',
     tagline: 'Where East Meets West',
@@ -355,6 +363,7 @@ export const destinations: Destination[] = [
   },
   {
     slug: 'sydney',
+    countrySlug: 'australia',
     name: 'Sydney',
     country: 'Australia',
     tagline: 'Harbour City of Dreams',
@@ -403,10 +412,18 @@ export const destinations: Destination[] = [
   },
 ];
 
-export const getDestination = (slug: string): Destination | undefined => {
+export const getDestination = (countrySlug: string, slug: string): Destination | undefined => {
+  return destinations.find((d) => d.countrySlug === countrySlug && d.slug === slug);
+};
+
+export const getDestinationBySlug = (slug: string): Destination | undefined => {
   return destinations.find((d) => d.slug === slug);
 };
 
 export const getSisterCities = (slugs: string[]): Destination[] => {
   return destinations.filter((d) => slugs.includes(d.slug));
+};
+
+export const getDestinationPath = (dest: Destination): string => {
+  return `/destinations/${dest.countrySlug}/${dest.slug}`;
 };
