@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80',
+    image: '/images/carousel/paris-eiffel-tower-city-skyline.jpg',
     tagline: 'Discover the World',
     title: 'Unforgettable Journeys Await You',
     description: 'Explore breathtaking destinations across the globe with curated travel experiences crafted just for you.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=80',
+    image: '/images/carousel/tokyo-japan-cityscape-night.jpg',
     tagline: 'Experience Asia',
     title: 'Where Ancient Traditions Meet Modern Marvels',
     description: 'From the temples of Tokyo to the beaches of Bali, discover the magic of Asia with expert-guided tours.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80',
+    image: '/images/carousel/rome-italy-colosseum-historic.jpg',
     tagline: 'Explore Europe',
     title: 'Walk Through Centuries of History',
     description: 'Wander through cobblestone streets, marvel at ancient ruins, and savor world-class cuisine across Europe.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80',
+    image: '/images/carousel/dubai-uae-skyline-desert-city.jpg',
     tagline: 'Adventure Awaits',
     title: 'Create Memories That Last Forever',
     description: 'From desert safaris to mountain treks, embark on adventures that transform the way you see the world.',

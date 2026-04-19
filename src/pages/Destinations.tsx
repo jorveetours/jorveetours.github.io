@@ -9,7 +9,7 @@ export default function Destinations() {
         className="page-hero"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80)',
+            'url(/images/destinations/world-travel-destinations-hero-banner.jpg)',
         }}
       >
         <div className="hero-content">

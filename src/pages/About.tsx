@@ -6,7 +6,7 @@ export default function About() {
         className="page-hero"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80)',
+            'url(/images/about/travel-adventure-hero-banner.jpg)',
         }}
       >
         <div className="hero-content">
@@ -21,7 +21,7 @@ export default function About() {
           <div className="about-grid">
             <div className="about-image">
               <img
-                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80"
+                src="/images/about/road-trip-travel-adventure-scenic.jpg"
                 alt="Travel adventure"
               />
               <div className="experience-badge">
