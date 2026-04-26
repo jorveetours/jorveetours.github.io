@@ -324,6 +324,46 @@
     }
   }
 
+  .dest-visa-cta {
+    border-radius: $radius-xl;
+    background: linear-gradient(120deg, $primary 0%, $primary-dark 100%);
+    color: $white;
+    padding: 34px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 26px 20px;
+    }
+
+    .visa-copy {
+      max-width: 760px;
+    }
+
+    h2 {
+      color: $white;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: $secondary;
+      }
+    }
+
+    p {
+      color: rgba($white, 0.9);
+      margin-bottom: 0;
+    }
+  }
+
   // Sister cities
   .sister-cities {
     background: $light-bg;
@@ -418,6 +458,10 @@
 // Destinations directory
 .destinations-directory {
   margin-top: 70px;
+
+  .destinations-hero {
+    background-image: url('/images/destinations/world-travel-destinations-hero-banner.jpg');
+  }
 
   .directory-grid {
     display: grid;

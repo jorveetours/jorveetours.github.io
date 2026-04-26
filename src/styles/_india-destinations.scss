@@ -1,0 +1,164 @@
+@use 'variables' as *;
+
+.india-destinations {
+  margin-top: 70px;
+
+  .india-hero {
+    background-image: url('/images/destinations/world-travel-destinations-hero-banner.jpg');
+  }
+
+  .india-states-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    @media (max-width: $desktop) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .india-state-card {
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    background: $white;
+    padding: 22px;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+      border-color: transparent;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 0.88rem;
+      color: $text-muted;
+      margin-bottom: 14px;
+    }
+
+    .india-city-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      a {
+        border: 1px solid $border;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.84rem;
+        color: $text;
+
+        &:hover {
+          color: $white;
+          background: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.destinations-directory {
+  .india-directory-card {
+    border: 2px dashed rgba($primary, 0.35);
+
+    .card-country {
+      color: $primary;
+    }
+  }
+}
+
+.india-city-not-found {
+  margin-top: 120px;
+  text-align: center;
+  padding: 40px;
+}
+
+.india-city-not-found-btn {
+  margin-top: 20px;
+}
+
+.india-city-page {
+  .india-faith-heritage {
+    background: $light-bg;
+    border: 1px solid $border;
+    border-radius: $radius-xl;
+    padding: 28px;
+    margin-bottom: 32px;
+
+    @media (max-width: $tablet) {
+      padding: 22px 16px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: $secondary;
+      }
+    }
+
+    .india-cultural-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cultural-item {
+      background: $white;
+      border: 1px solid $border;
+      border-radius: $radius-md;
+      padding: 14px 14px;
+
+      h4 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+          color: $primary;
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $text-light;
+      }
+
+      &.annual-event {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  .india-city-hero {
+    background-image: url('/images/destinations/world-travel-destinations-hero-banner.jpg');
+  }
+
+  .india-sister-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

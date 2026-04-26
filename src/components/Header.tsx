@@ -17,7 +17,11 @@ export default function Header() {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const isActive = (path: string) => location.pathname === path ? 'active' : '';
+  const isActive = (path: string) =>
+    location.pathname === path || location.pathname.startsWith(`${path}/`) ? 'active' : '';
+
+  const isContactActive =
+    location.pathname === '/' && location.hash === '#contact' ? 'active' : '';
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -32,8 +36,9 @@ export default function Header() {
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <Link to="/" className={isActive('/')}>Home</Link>
           <Link to="/destinations" className={isActive('/destinations')}>Destinations</Link>
+          <Link to="/visa" className={isActive('/visa')}>Visa</Link>
           <Link to="/about" className={isActive('/about')}>About Us</Link>
-          <Link to="/#contact" className={isActive('/#contact')}>Contact Us</Link>
+          <Link to="/#contact" className={isContactActive}>Contact Us</Link>
         </nav>
 
         <button

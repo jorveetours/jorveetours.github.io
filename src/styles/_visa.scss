@@ -1,0 +1,383 @@
+@use 'variables' as *;
+
+.visa-directory {
+  margin-top: 70px;
+
+  .visa-hero {
+    background-image: url('/images/destinations/world-travel-destinations-hero-banner.jpg');
+  }
+
+  .visa-support-banner {
+    border-radius: $radius-xl;
+    background: linear-gradient(120deg, $primary 0%, $primary-dark 100%);
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 28px 30px;
+    margin-bottom: 30px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px 20px;
+    }
+
+    h3 {
+      color: $white;
+      margin-bottom: 6px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      color: rgba($white, 0.9);
+      font-size: 0.95rem;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .visa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    @media (max-width: $desktop) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .visa-card {
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    background: $white;
+    padding: 24px;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: $shadow-md;
+    }
+
+    .visa-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+
+      span {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .visa-region {
+        color: $secondary;
+      }
+
+      .visa-processing {
+        color: $text-muted;
+      }
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: $text-light;
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+
+    .visa-meta {
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px 0;
+      margin-bottom: 14px;
+      color: $text;
+      font-size: 0.86rem;
+
+      i {
+        color: $primary;
+        margin-right: 6px;
+      }
+    }
+
+    .explore-link {
+      color: $primary;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.visa-not-found {
+  margin-top: 120px;
+  text-align: center;
+  padding: 40px;
+}
+
+.visa-not-found-btn {
+  margin-top: 20px;
+}
+
+.visa-detail-page {
+  margin-top: 70px;
+
+  .visa-detail-hero {
+    background: linear-gradient(120deg, $dark 0%, $primary-dark 100%);
+    color: $white;
+    padding: 70px 0 54px;
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 0.86rem;
+
+      a {
+        color: rgba($white, 0.85);
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      span,
+      i {
+        color: rgba($white, 0.8);
+      }
+    }
+
+    h1 {
+      color: $white;
+      margin-bottom: 8px;
+      font-size: 2.7rem;
+
+      @media (max-width: $tablet) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      color: rgba($white, 0.9);
+      max-width: 620px;
+    }
+  }
+
+  .visa-detail-content {
+    padding: 46px 20px 70px;
+
+    @media (max-width: $tablet) {
+      padding: 38px 16px 56px;
+    }
+  }
+
+  .visa-overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+
+    @media (max-width: $desktop) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .overview-card {
+      border: 1px solid $border;
+      border-radius: $radius-lg;
+      padding: 20px;
+      background: $white;
+
+      i {
+        color: $secondary;
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $text-light;
+      }
+    }
+  }
+
+  .visa-requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 28px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    .requirements-card {
+      border: 1px solid $border;
+      border-radius: $radius-xl;
+      padding: 28px 24px;
+      background: $white;
+
+      h2 {
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+          color: $primary;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: 0.93rem;
+          color: $text-light;
+
+          i {
+            margin-top: 3px;
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  .visa-support-card {
+    background: linear-gradient(120deg, #f2f8fd 0%, #fff7ef 100%);
+    border: 1px solid $border;
+    border-radius: $radius-xl;
+    padding: 34px;
+    margin-bottom: 28px;
+
+    @media (max-width: $tablet) {
+      padding: 26px 20px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $text-light;
+      max-width: 740px;
+      margin-bottom: 18px;
+    }
+
+    .support-items {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+
+      @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+      }
+
+      div {
+        background: $white;
+        border: 1px solid $border;
+        border-radius: $radius-md;
+        padding: 14px 16px;
+
+        h4 {
+          font-size: 0.95rem;
+          margin-bottom: 6px;
+          color: $primary-dark;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: 0.9rem;
+
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .support-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+  .suggested-visas {
+    border-top: 1px solid $border;
+    padding-top: 24px;
+
+    h3 {
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+
+    .suggested-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+
+      @media (max-width: $desktop) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .suggested-item {
+        border: 1px solid $border;
+        border-radius: $radius-md;
+        padding: 13px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.92rem;
+        transition: $transition;
+
+        &:hover {
+          border-color: $primary;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
