@@ -15,6 +15,92 @@ const distDir = path.resolve(__dirname, '../dist');
 
 const SITE_NAME = 'Jorvee Tours & Travels';
 const SITE_URL = 'https://jorveetours.github.io';
+const indiaStateCities = [
+  { stateSlug: 'andhra-pradesh', stateName: 'Andhra Pradesh', cities: ['Visakhapatnam', 'Vijayawada', 'Tirupati', 'Kurnool'] },
+  { stateSlug: 'arunachal-pradesh', stateName: 'Arunachal Pradesh', cities: ['Itanagar', 'Tawang', 'Pasighat', 'Ziro'] },
+  { stateSlug: 'assam', stateName: 'Assam', cities: ['Guwahati', 'Dibrugarh', 'Silchar', 'Jorhat'] },
+  { stateSlug: 'bihar', stateName: 'Bihar', cities: ['Patna', 'Gaya', 'Muzaffarpur', 'Bhagalpur'] },
+  { stateSlug: 'chhattisgarh', stateName: 'Chhattisgarh', cities: ['Raipur', 'Jagdalpur', 'Bilaspur', 'Durg'] },
+  { stateSlug: 'goa', stateName: 'Goa', cities: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa'] },
+  { stateSlug: 'gujarat', stateName: 'Gujarat', cities: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot'] },
+  { stateSlug: 'haryana', stateName: 'Haryana', cities: ['Gurugram', 'Faridabad', 'Panipat', 'Karnal'] },
+  { stateSlug: 'himachal-pradesh', stateName: 'Himachal Pradesh', cities: ['Shimla', 'Dharamshala', 'Manali', 'Kullu'] },
+  { stateSlug: 'jharkhand', stateName: 'Jharkhand', cities: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Deoghar'] },
+  { stateSlug: 'karnataka', stateName: 'Karnataka', cities: ['Bengaluru', 'Mysuru', 'Mangaluru', 'Hubballi'] },
+  { stateSlug: 'kerala', stateName: 'Kerala', cities: ['Kochi', 'Thiruvananthapuram', 'Kozhikode', 'Alappuzha'] },
+  { stateSlug: 'madhya-pradesh', stateName: 'Madhya Pradesh', cities: ['Bhopal', 'Indore', 'Gwalior', 'Jabalpur'] },
+  { stateSlug: 'maharashtra', stateName: 'Maharashtra', cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik'] },
+  { stateSlug: 'manipur', stateName: 'Manipur', cities: ['Imphal', 'Churachandpur', 'Thoubal', 'Bishnupur'] },
+  { stateSlug: 'meghalaya', stateName: 'Meghalaya', cities: ['Shillong', 'Tura', 'Cherrapunji', 'Jowai'] },
+  { stateSlug: 'mizoram', stateName: 'Mizoram', cities: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip'] },
+  { stateSlug: 'nagaland', stateName: 'Nagaland', cities: ['Kohima', 'Dimapur', 'Mokokchung', 'Mon'] },
+  { stateSlug: 'odisha', stateName: 'Odisha', cities: ['Bhubaneswar', 'Puri', 'Cuttack', 'Rourkela'] },
+  { stateSlug: 'punjab', stateName: 'Punjab', cities: ['Amritsar', 'Ludhiana', 'Jalandhar', 'Patiala'] },
+  { stateSlug: 'rajasthan', stateName: 'Rajasthan', cities: ['Jaipur', 'Udaipur', 'Jodhpur', 'Bikaner'] },
+  { stateSlug: 'sikkim', stateName: 'Sikkim', cities: ['Gangtok', 'Namchi', 'Pelling', 'Lachung'] },
+  { stateSlug: 'tamil-nadu', stateName: 'Tamil Nadu', cities: ['Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli'] },
+  { stateSlug: 'telangana', stateName: 'Telangana', cities: ['Hyderabad', 'Warangal', 'Nizamabad', 'Karimnagar'] },
+  { stateSlug: 'tripura', stateName: 'Tripura', cities: ['Agartala', 'Udaipur', 'Dharmanagar', 'Kailashahar'] },
+  {
+    stateSlug: 'uttar-pradesh',
+    stateName: 'Uttar Pradesh',
+    cities: ['Lucknow', 'Varanasi', 'Noida', 'Gorakhpur', 'Khusi Nagar', 'Kanpur', 'Allahabad', 'Badaun'],
+  },
+  { stateSlug: 'uttarakhand', stateName: 'Uttarakhand', cities: ['Dehradun', 'Nainital', 'Haridwar', 'Rishikesh'] },
+  { stateSlug: 'west-bengal', stateName: 'West Bengal', cities: ['Kolkata', 'Darjeeling', 'Siliguri', 'Durgapur'] },
+];
+
+const toSlug = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+const visaSlugs = [
+  'australia',
+  'austria',
+  'azerbaijan',
+  'bangladesh',
+  'bahrain',
+  'cambodia',
+  'china',
+  'czech-republic',
+  'dubai-uae',
+  'egypt',
+  'finland',
+  'france',
+  'georgia',
+  'germany',
+  'greece',
+  'hong-kong',
+  'iceland',
+  'indonesia',
+  'ireland',
+  'italy',
+  'japan',
+  'kenya',
+  'malaysia',
+  'morocco',
+  'netherlands',
+  'new-zealand',
+  'norway',
+  'portugal',
+  'qatar',
+  'russia',
+  'singapore',
+  'south-africa',
+  'south-korea',
+  'spain',
+  'sri-lanka',
+  'sweden',
+  'switzerland',
+  'thailand',
+  'united-kingdom-uk',
+  'uzbekistan',
+  'vietnam',
+  'mongolia',
+  'zambia',
+];
 
 // All routes with their SEO data
 const routes = [
@@ -78,7 +164,43 @@ const routes = [
     description:
       'Australia\'s harbor city captivates with its iconic Opera House, stunning beaches like Bondi, and a laid-back lifestyle.',
   },
+  {
+    path: '/destinations/india',
+    title: 'India Destinations by State and City',
+    description:
+      'Explore all 28 states of India with major city pages, travel highlights, and practical planning information.',
+  },
+  {
+    path: '/visa',
+    title: 'Visa Offerings',
+    description:
+      'Explore country-wise visa services and basic requirements with guided support from Jorvee Tours & Travels.',
+  },
 ];
+
+for (const slug of visaSlugs) {
+  const titleCaseSlug = slug
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+
+  routes.push({
+    path: `/visa/${slug}`,
+    title: `${titleCaseSlug} Visa Basic Requirements`,
+    description: `Check basic requirements, processing time and documentation guidance for ${titleCaseSlug} visa support with Jorvee Tours & Travels.`,
+  });
+}
+
+for (const state of indiaStateCities) {
+  for (const city of state.cities) {
+    const citySlug = toSlug(city);
+    routes.push({
+      path: `/destinations/india/${state.stateSlug}/${citySlug}`,
+      title: `${city}, ${state.stateName}, India — Travel Guide`,
+      description: `Plan your trip to ${city}, ${state.stateName} with city highlights, food recommendations, and travel information from Jorvee Tours & Travels.`,
+    });
+  }
+}
 
 // Read the built index.html as template
 const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');

@@ -32,6 +32,7 @@ export default function Footer() {
             <li><Link to="/"><i className="fas fa-chevron-right"></i> Home</Link></li>
             <li><Link to="/about"><i className="fas fa-chevron-right"></i> About Us</Link></li>
             <li><Link to="/destinations"><i className="fas fa-chevron-right"></i> Destinations</Link></li>
+            <li><Link to="/visa"><i className="fas fa-chevron-right"></i> Visa Offerings</Link></li>
             <li><Link to="/#contact"><i className="fas fa-chevron-right"></i> Contact Us</Link></li>
           </ul>
         </div>
@@ -58,7 +59,7 @@ export default function Footer() {
             <li><a href="#"><i className="fas fa-chevron-right"></i> Honeymoon Packages</a></li>
             <li><a href="#"><i className="fas fa-chevron-right"></i> Adventure Trips</a></li>
             <li><a href="#"><i className="fas fa-chevron-right"></i> Corporate Travel</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Visa Assistance</a></li>
+            <li><Link to="/visa"><i className="fas fa-chevron-right"></i> Visa Assistance</Link></li>
           </ul>
         </div>
 

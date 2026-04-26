@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { getDestination, getSisterCities, getDestinationPath } from '../data/destinations';
+import { getVisaOfferingByDestinationCountry, getVisaPath } from '../data/visaOfferings';
 import SEO from '../components/SEO';
 
 export default function DestinationDetail() {
@@ -19,6 +20,7 @@ export default function DestinationDetail() {
   }
 
   const sisters = getSisterCities(dest.sisterCities);
+  const visaOffering = getVisaOfferingByDestinationCountry(dest.countrySlug);
 
   return (
     <div className="destination-page">
@@ -161,6 +163,22 @@ export default function DestinationDetail() {
             <p>{dest.nearestRailway}</p>
           </div>
         </div>
+
+        {/* Visa Process */}
+        {visaOffering && (
+          <section className="dest-visa-cta">
+            <div className="visa-copy">
+              <h2><i className="fas fa-passport"></i> Visa for {dest.country}</h2>
+              <p>
+                Planning your {dest.name} trip? Read the basic visa process, required
+                documents, and support details for {visaOffering.name}.
+              </p>
+            </div>
+            <Link to={getVisaPath(visaOffering)} className="btn btn-secondary">
+              Read Visa Process <i className="fas fa-arrow-right"></i>
+            </Link>
+          </section>
+        )}
 
         {/* Sister Cities */}
         {sisters.length > 0 && (
