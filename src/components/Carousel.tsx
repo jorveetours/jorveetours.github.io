@@ -30,6 +30,7 @@ const slides = [
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -40,27 +41,39 @@ export default function Carousel() {
   }, []);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateAutoPlay = () => setAutoPlay(!mediaQuery.matches);
+
+    updateAutoPlay();
+    mediaQuery.addEventListener('change', updateAutoPlay);
+
+    return () => mediaQuery.removeEventListener('change', updateAutoPlay);
+  }, []);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, autoPlay]);
 
   return (
-    <section className="carousel">
+    <section className="carousel" role="region" aria-roledescription="carousel" aria-label="Featured destinations">
       {slides.map((slide, index) => (
         <div
           key={index}
           className={`slide ${index === current ? 'active' : ''}`}
-          style={{ backgroundImage: `url(${slide.image})` }}
         >
+          <img className="slide-image" src={slide.image} alt="" aria-hidden="true" />
           <div className="slide-content">
             <span className="tagline">{slide.tagline}</span>
             <h1>{slide.title}</h1>
             <p>{slide.description}</p>
             <div className="carousel-buttons">
-              <Link to="/destinations" className="btn btn-secondary">
-                Explore Destinations <i className="fas fa-arrow-right"></i>
+              <Link to="/destinations" className="btn btn-secondary" tabIndex={index === current ? 0 : -1}>
+                Explore Destinations <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
-              <Link to="/#contact" className="btn btn-outline">
+              <Link to="/#contact" className="btn btn-outline" tabIndex={index === current ? 0 : -1}>
                 Get in Touch
               </Link>
             </div>
@@ -68,11 +81,11 @@ export default function Carousel() {
         </div>
       ))}
 
-      <button className="carousel-arrow prev" onClick={prev} aria-label="Previous slide">
-        <i className="fas fa-chevron-left"></i>
+      <button className="carousel-arrow prev" onClick={prev} aria-label="Previous slide" type="button">
+        <i className="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
-      <button className="carousel-arrow next" onClick={next} aria-label="Next slide">
-        <i className="fas fa-chevron-right"></i>
+      <button className="carousel-arrow next" onClick={next} aria-label="Next slide" type="button">
+        <i className="fas fa-chevron-right" aria-hidden="true"></i>
       </button>
 
       <div className="carousel-nav">
@@ -82,6 +95,7 @@ export default function Carousel() {
             className={index === current ? 'active' : ''}
             onClick={() => setCurrent(index)}
             aria-label={`Go to slide ${index + 1}`}
+            type="button"
           />
         ))}
       </div>
