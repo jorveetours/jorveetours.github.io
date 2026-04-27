@@ -15,6 +15,8 @@
 - Home: https://jorveetours.github.io/
 - About Us: https://jorveetours.github.io/about
 - Destinations Directory: https://jorveetours.github.io/destinations
+- India Destinations Directory: https://jorveetours.github.io/destinations/india
+- Visa Offerings Directory: https://jorveetours.github.io/visa
 
 ## Destinations
 
@@ -27,6 +29,71 @@
 - Istanbul, Turkey: https://jorveetours.github.io/destinations/turkey/istanbul
 - Sydney, Australia: https://jorveetours.github.io/destinations/australia/sydney
 
+## India City Destinations
+
+- URL pattern: https://jorveetours.github.io/destinations/india/{state-slug}/{city-slug}
+- Coverage: 28 Indian states with major city destination pages
+- Examples:
+	- New Delhi: https://jorveetours.github.io/destinations/india/delhi/new-delhi
+	- Mumbai: https://jorveetours.github.io/destinations/india/maharashtra/mumbai
+	- Chennai: https://jorveetours.github.io/destinations/india/tamil-nadu/chennai
+	- Bengaluru: https://jorveetours.github.io/destinations/india/karnataka/bengaluru
+	- Hyderabad: https://jorveetours.github.io/destinations/india/telangana/hyderabad
+	- Kolkata: https://jorveetours.github.io/destinations/india/west-bengal/kolkata
+	- Jaipur: https://jorveetours.github.io/destinations/india/rajasthan/jaipur
+	- Lucknow: https://jorveetours.github.io/destinations/india/uttar-pradesh/lucknow
+	- Varanasi: https://jorveetours.github.io/destinations/india/uttar-pradesh/varanasi
+	- Khusi Nagar: https://jorveetours.github.io/destinations/india/uttar-pradesh/khusi-nagar
+
+## Visa Pages
+
+- URL pattern: https://jorveetours.github.io/visa/{visa-slug}
+- Directory: https://jorveetours.github.io/visa
+- Available visa pages include:
+	- Australia: https://jorveetours.github.io/visa/australia
+	- Austria: https://jorveetours.github.io/visa/austria
+	- Azerbaijan: https://jorveetours.github.io/visa/azerbaijan
+	- Bangladesh: https://jorveetours.github.io/visa/bangladesh
+	- Bahrain: https://jorveetours.github.io/visa/bahrain
+	- Cambodia: https://jorveetours.github.io/visa/cambodia
+	- China: https://jorveetours.github.io/visa/china
+	- Czech Republic: https://jorveetours.github.io/visa/czech-republic
+	- Dubai UAE: https://jorveetours.github.io/visa/dubai-uae
+	- Egypt: https://jorveetours.github.io/visa/egypt
+	- Finland: https://jorveetours.github.io/visa/finland
+	- France: https://jorveetours.github.io/visa/france
+	- Georgia: https://jorveetours.github.io/visa/georgia
+	- Germany: https://jorveetours.github.io/visa/germany
+	- Greece: https://jorveetours.github.io/visa/greece
+	- Hong Kong: https://jorveetours.github.io/visa/hong-kong
+	- Iceland: https://jorveetours.github.io/visa/iceland
+	- Indonesia: https://jorveetours.github.io/visa/indonesia
+	- Ireland: https://jorveetours.github.io/visa/ireland
+	- Italy: https://jorveetours.github.io/visa/italy
+	- Japan: https://jorveetours.github.io/visa/japan
+	- Kenya: https://jorveetours.github.io/visa/kenya
+	- Malaysia: https://jorveetours.github.io/visa/malaysia
+	- Morocco: https://jorveetours.github.io/visa/morocco
+	- Netherlands: https://jorveetours.github.io/visa/netherlands
+	- New Zealand: https://jorveetours.github.io/visa/new-zealand
+	- Norway: https://jorveetours.github.io/visa/norway
+	- Portugal: https://jorveetours.github.io/visa/portugal
+	- Qatar: https://jorveetours.github.io/visa/qatar
+	- Russia: https://jorveetours.github.io/visa/russia
+	- Singapore: https://jorveetours.github.io/visa/singapore
+	- South Africa: https://jorveetours.github.io/visa/south-africa
+	- South Korea: https://jorveetours.github.io/visa/south-korea
+	- Spain: https://jorveetours.github.io/visa/spain
+	- Sri Lanka: https://jorveetours.github.io/visa/sri-lanka
+	- Sweden: https://jorveetours.github.io/visa/sweden
+	- Switzerland: https://jorveetours.github.io/visa/switzerland
+	- Thailand: https://jorveetours.github.io/visa/thailand
+	- United Kingdom: https://jorveetours.github.io/visa/united-kingdom-uk
+	- Uzbekistan: https://jorveetours.github.io/visa/uzbekistan
+	- Vietnam: https://jorveetours.github.io/visa/vietnam
+	- Mongolia: https://jorveetours.github.io/visa/mongolia
+	- Zambia: https://jorveetours.github.io/visa/zambia
+
 ## Services
 - Group Tours
 - Private Tours
@@ -34,6 +101,11 @@
 - Adventure Trips
 - Corporate Travel
 - Visa Assistance
+
+## SEO Signals
+- Primary sitemap: https://jorveetours.github.io/sitemap.xml
+- LLM content index: https://jorveetours.github.io/llms.txt
+- Canonical domain: https://jorveetours.github.io
 
 ## About Our Destination Pages
 Each destination page includes:
