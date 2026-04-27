@@ -1,6 +1,13 @@
+import SEO from '../components/SEO';
+
 export default function About() {
   return (
     <div className="about-page">
+      <SEO
+        title="About Us"
+        description="Learn about Jorvee Tours & Travels — your trusted partner in crafting extraordinary travel experiences since 2010. 15+ years of expertise, 50+ destinations."
+        path="/about"
+      />
       {/* Hero */}
       <div
         className="page-hero"

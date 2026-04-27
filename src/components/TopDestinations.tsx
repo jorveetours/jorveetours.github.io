@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { destinations } from '../data/destinations';
+import { destinations, getDestinationPath } from '../data/destinations';
 
 export default function TopDestinations() {
   // Show first 8 destinations (4x2 grid = "4x4 tiles" as 4 columns)
@@ -16,10 +16,10 @@ export default function TopDestinations() {
 
         <div className="destinations-grid">
           {topDests.map((dest) => (
-            <Link to={`/destinations/${dest.slug}`} key={dest.slug} className="destination-card">
+            <Link to={getDestinationPath(dest)} key={dest.slug} className="destination-card">
               <img
                 src={dest.heroImage}
-                alt={dest.name}
+                alt={`${dest.name} ${dest.country} travel destination - ${dest.tagline}`}
                 className="card-image"
                 loading="lazy"
               />

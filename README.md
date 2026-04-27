@@ -1,6 +1,40 @@
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React + TypeScript + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+## Run locally
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- npm (comes with Node.js)
+
+### Steps (Windows / VS Code Terminal)
+1. Open terminal in the project folder:
+   ```powershell
+   cd c:\git\jorveetours
+   ```
+
+2. Install dependencies:
+   ```powershell
+   npm install
+   ```
+
+3. Start the development server:
+   ```powershell
+   npm run dev
+   ```
+
+4. Open the local URL shown in terminal (usually):
+   - `http://localhost:5173`
+
+### Build and preview production locally
+```powershell
+npm run build
+npm run preview
+```
 
 Currently, two official plugins are available:
 

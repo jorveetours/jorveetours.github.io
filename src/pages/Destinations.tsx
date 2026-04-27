@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-import { destinations } from '../data/destinations';
+import { destinations, getDestinationPath } from '../data/destinations';
+import SEO from '../components/SEO';
 
 export default function Destinations() {
   return (
     <div className="destinations-directory">
+      <SEO
+        title="Explore World Destinations"
+        description="Discover Paris, Tokyo, Rome, London, Dubai, New York, Istanbul, Sydney and more iconic destinations with Jorvee Tours & Travels."
+        path="/destinations"
+      />
       {/* Hero */}
-      <div
-        className="page-hero"
-        style={{
-          backgroundImage:
-            'url(/images/destinations/world-travel-destinations-hero-banner.jpg)',
-        }}
-      >
+      <div className="page-hero destinations-hero">
         <div className="hero-content">
           <h1>Our Destinations</h1>
           <p>Explore the world's most iconic cities with Jorvee Tours & Travels</p>
@@ -28,9 +28,33 @@ export default function Destinations() {
           </div>
 
           <div className="directory-grid">
+            <Link to="/destinations/india" className="directory-card india-directory-card">
+              <div className="card-image">
+                <img
+                  src="/images/destinations/world-travel-destinations-hero-banner.jpg"
+                  alt="India destinations"
+                  loading="lazy"
+                />
+              </div>
+              <div className="card-body">
+                <span className="card-country">India</span>
+                <h3>All States and Major Cities</h3>
+                <p>
+                  Browse India by country, state, and city with dedicated city pages
+                  to help plan your domestic travel.
+                </p>
+                <div className="card-footer">
+                  <span><i className="fas fa-map-marker-alt"></i> State-wise directory</span>
+                  <span className="explore-link">
+                    Explore <i className="fas fa-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+            </Link>
+
             {destinations.map((dest) => (
               <Link
-                to={`/destinations/${dest.slug}`}
+                to={getDestinationPath(dest)}
                 key={dest.slug}
                 className="directory-card"
               >
