@@ -6,10 +6,10 @@ export default function TopDestinations() {
   const topDests = destinations.slice(0, 8);
 
   return (
-    <section className="top-destinations section">
+    <section className="top-destinations section" aria-labelledby="top-destinations-title">
       <div className="container">
         <div className="section-title">
-          <h2>Top Destinations</h2>
+          <h2 id="top-destinations-title">Top Destinations</h2>
           <p>Discover the world's most captivating cities, handpicked by our travel experts for unforgettable experiences.</p>
           <div className="underline"></div>
         </div>
@@ -28,7 +28,7 @@ export default function TopDestinations() {
                 <span className="card-country">{dest.country}</span>
                 <h3>{dest.name}</h3>
                 <div className="card-meta">
-                  <span><i className="fas fa-map-marker-alt"></i> {dest.tagline}</span>
+                  <span><i className="fas fa-map-marker-alt" aria-hidden="true"></i> {dest.tagline}</span>
                 </div>
               </div>
             </Link>

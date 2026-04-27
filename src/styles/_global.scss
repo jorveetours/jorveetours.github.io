@@ -34,6 +34,42 @@ a {
   transition: $transition;
 }
 
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: $dark;
+  color: $white;
+  padding: 10px 14px;
+  border-radius: $radius-sm;
+  z-index: 2000;
+  font-weight: 600;
+
+  &:focus-visible {
+    top: 12px;
+  }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid $primary;
+  outline-offset: 2px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -177,5 +213,19 @@ ul {
       font-size: 1.2rem;
       opacity: 0.9;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -38,33 +38,33 @@ export default function IndiaDestinationDetail() {
         <div className="hero-content">
           <div className="breadcrumb">
             <Link to="/">Home</Link>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <Link to="/destinations">Destinations</Link>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <Link to="/destinations/india">India</Link>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <span>{city.stateName}</span>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <span>{city.cityName}</span>
           </div>
           <h1>{city.cityName}</h1>
           <div className="hero-meta">
             <div className="meta-item">
-              <i className="fas fa-map-marker-alt"></i> {city.stateName}, India
+              <i className="fas fa-map-marker-alt" aria-hidden="true"></i> {city.stateName}, India
             </div>
             <div className="meta-item">
-              <i className="fas fa-tag"></i> {city.tagline}
+              <i className="fas fa-tag" aria-hidden="true"></i> {city.tagline}
             </div>
             <div className="meta-item">
-              <i className="fas fa-plane"></i> {city.nearestAirport}
+              <i className="fas fa-plane" aria-hidden="true"></i> {city.nearestAirport}
             </div>
           </div>
         </div>
       </div>
 
       <div className="dest-content">
-        <section className="dest-about">
-          <h2><i className="fas fa-info-circle"></i> About {city.cityName}</h2>
+        <section className="dest-about" aria-labelledby="india-city-about-heading">
+          <h2 id="india-city-about-heading"><i className="fas fa-info-circle" aria-hidden="true"></i> About {city.cityName}</h2>
           <div className="about-text">
             <p>{city.description}</p>
           </div>
@@ -72,11 +72,11 @@ export default function IndiaDestinationDetail() {
 
         <div className="dest-info-grid">
           <div className="info-card">
-            <h3><i className="fas fa-map-signs"></i> Top Experiences</h3>
+            <h3><i className="fas fa-map-signs" aria-hidden="true"></i> Top Experiences</h3>
             <ul>
               {city.highlights.map((item) => (
                 <li key={item}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   {item}
                 </li>
               ))}
@@ -84,11 +84,11 @@ export default function IndiaDestinationDetail() {
           </div>
 
           <div className="info-card">
-            <h3><i className="fas fa-utensils"></i> Food to Try</h3>
+            <h3><i className="fas fa-utensils" aria-hidden="true"></i> Food to Try</h3>
             <ul>
               {city.foodToTry.map((item) => (
                 <li key={item}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   {item}
                 </li>
               ))}
@@ -96,35 +96,35 @@ export default function IndiaDestinationDetail() {
           </div>
         </div>
 
-        <section className="india-faith-heritage">
-          <h2><i className="fas fa-landmark"></i> Faith, Heritage and Annual Cultural Event</h2>
+        <section className="india-faith-heritage" aria-labelledby="india-city-culture-heading">
+          <h2 id="india-city-culture-heading"><i className="fas fa-landmark" aria-hidden="true"></i> Faith, Heritage and Annual Cultural Event</h2>
           <div className="india-cultural-grid">
             <div className="cultural-item">
-              <h4><i className="fas fa-place-of-worship"></i> Famous Temple</h4>
+              <h4><i className="fas fa-place-of-worship" aria-hidden="true"></i> Famous Temple</h4>
               <p>{city.culture.temple}</p>
             </div>
             <div className="cultural-item">
-              <h4><i className="fas fa-mosque"></i> Famous Mosque</h4>
+              <h4><i className="fas fa-mosque" aria-hidden="true"></i> Famous Mosque</h4>
               <p>{city.culture.mosque}</p>
             </div>
             <div className="cultural-item">
-              <h4><i className="fas fa-church"></i> Famous Church</h4>
+              <h4><i className="fas fa-church" aria-hidden="true"></i> Famous Church</h4>
               <p>{city.culture.church}</p>
             </div>
             <div className="cultural-item">
-              <h4><i className="fas fa-khanda"></i> Famous Gurudwara</h4>
+              <h4><i className="fas fa-khanda" aria-hidden="true"></i> Famous Gurudwara</h4>
               <p>{city.culture.gurudwara}</p>
             </div>
             <div className="cultural-item">
-              <h4><i className="fas fa-tree"></i> Famous Park</h4>
+              <h4><i className="fas fa-tree" aria-hidden="true"></i> Famous Park</h4>
               <p>{city.culture.park}</p>
             </div>
             <div className="cultural-item">
-              <h4><i className="fas fa-monument"></i> Historical Site</h4>
+              <h4><i className="fas fa-monument" aria-hidden="true"></i> Historical Site</h4>
               <p>{city.culture.historicalSite}</p>
             </div>
             <div className="cultural-item annual-event">
-              <h4><i className="fas fa-calendar-star"></i> Yearly Cultural Event</h4>
+              <h4><i className="fas fa-calendar-star" aria-hidden="true"></i> Yearly Cultural Event</h4>
               <p>{city.culture.annualCulturalEvent}</p>
             </div>
           </div>
@@ -132,17 +132,17 @@ export default function IndiaDestinationDetail() {
 
         <div className="dest-travel-info">
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-calendar-alt"></i></div>
+            <div className="icon"><i className="fas fa-calendar-alt" aria-hidden="true"></i></div>
             <h3>Best Time to Travel</h3>
             <p>{city.bestTimeToTravel}</p>
           </div>
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-plane-departure"></i></div>
+            <div className="icon"><i className="fas fa-plane-departure" aria-hidden="true"></i></div>
             <h3>Nearest Airport</h3>
             <p>{city.nearestAirport}</p>
           </div>
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-train"></i></div>
+            <div className="icon"><i className="fas fa-train" aria-hidden="true"></i></div>
             <h3>Nearest Railway</h3>
             <p>{city.nearestRailway}</p>
           </div>

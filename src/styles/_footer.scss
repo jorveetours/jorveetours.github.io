@@ -59,7 +59,7 @@
       font-size: 0.9rem;
       line-height: 1.7;
       margin-bottom: 20px;
-      opacity: 0.75;
+      opacity: 0.9;
     }
 
     .social-links {
@@ -115,7 +115,7 @@
 
       a {
         font-size: 0.9rem;
-        opacity: 0.7;
+        opacity: 0.9;
         transition: $transition;
         display: flex;
         align-items: center;
@@ -130,6 +130,10 @@
           opacity: 1;
           color: $secondary;
           transform: translateX(4px);
+        }
+
+        &:focus-visible {
+          color: $white;
         }
       }
     }
@@ -190,9 +194,15 @@
 
         p {
           font-size: 0.85rem;
-          opacity: 0.65;
+          opacity: 0.9;
           line-height: 1.5;
           margin: 0;
+
+          a {
+            color: $white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
         }
       }
     }
@@ -216,7 +226,7 @@
 
     p {
       font-size: 0.85rem;
-      opacity: 0.6;
+      opacity: 0.85;
     }
 
     .footer-bottom-links {
@@ -225,7 +235,7 @@
 
       a {
         font-size: 0.85rem;
-        opacity: 0.6;
+        opacity: 0.85;
         transition: $transition;
 
         &:hover {
