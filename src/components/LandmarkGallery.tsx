@@ -17,6 +17,8 @@ interface LandmarkImage {
   visible: boolean;
 }
 
+const DEFAULT_FALLBACK_IMAGE = '/images/destinations/world-travel-destinations-hero-banner.jpg';
+
 const LANDMARK_CATEGORIES = [
   { slug: 'mandir', name: 'Temple', icon: '🕉️' },
   { slug: 'masjid', name: 'Mosque', icon: '🕌' },
@@ -111,7 +113,7 @@ export default function LandmarkGallery({ cityName, citySlug, stateName, stateSl
   const generateDescription = (landmarkName: string) =>
     `Discover ${landmarkName} in ${cityName}, ${stateName}. Explore local attractions and cultural heritage.`;
 
-  const visibleLandmarks = landmarks.filter(l => !l.failed);
+  const visibleLandmarks = landmarks;
 
   return (
     <section className="landmark-gallery" id="landmark-gallery">
@@ -141,7 +143,9 @@ export default function LandmarkGallery({ cityName, citySlug, stateName, stateSl
                 ref={setItemRef(landmark.slug)}
                 data-slug={landmark.slug}
                 className={`gallery-item${landmark.visible ? ' is-visible' : ''}`}
-                onClick={() => landmark.visible && setSelectedImage(landmark.path)}
+                onClick={() =>
+                  landmark.visible && setSelectedImage(landmark.failed ? DEFAULT_FALLBACK_IMAGE : landmark.path)
+                }
               >
                 {/* Placeholder shown until card scrolls into view */}
                 {!landmark.visible && (
@@ -152,7 +156,7 @@ export default function LandmarkGallery({ cityName, citySlug, stateName, stateSl
                 {landmark.visible && (
                   <>
                     <img
-                      src={landmark.path}
+                      src={landmark.failed ? DEFAULT_FALLBACK_IMAGE : landmark.path}
                       alt={generateAltText(landmark.name)}
                       title={generateTitle(landmark.name)}
                       className="landmark-image"
@@ -221,6 +225,11 @@ export default function LandmarkGallery({ cityName, citySlug, stateName, stateSl
               src={selectedImage}
               alt={`Full size landmark image from ${cityName}`}
               className="modal-image"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (img.src.includes('world-travel-destinations-hero-banner.jpg')) return;
+                img.src = DEFAULT_FALLBACK_IMAGE;
+              }}
             />
           </div>
         </div>

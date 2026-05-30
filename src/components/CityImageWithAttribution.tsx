@@ -44,9 +44,10 @@ export default function CityImageWithAttribution({
   showAttribution = true,
 }: CityImageWithAttributionProps) {
   const [metadata, setMetadata] = useState<ImageMetadata | null>(null);
-  const [imageError, setImageError] = useState(false);
+  const [hasFallback, setHasFallback] = useState(false);
 
   const imagePath = `/images/india/${state}/${city}/${city}.jpg`;
+  const fallbackImagePath = '/images/destinations/world-travel-destinations-hero-banner.jpg';
   const metadataPath = `/images/india/${state}/${city}/metadata.json`;
 
   // Load metadata
@@ -69,31 +70,24 @@ export default function CityImageWithAttribution({
   }, [city, metadataPath, showAttribution]);
 
   const handleImageError = () => {
-    setImageError(true);
+    if (hasFallback) {
+      return;
+    }
+    setHasFallback(true);
     console.error(`Image failed to load: ${imagePath}`);
   };
 
   return (
     <figure className={`city-image-wrapper ${className}`}>
       <div className="city-image-container">
-        {imageError ? (
-          <div className="image-placeholder">
-            <div className="placeholder-content">
-              <i className="fas fa-image"></i>
-              <p>Image not available</p>
-              <small>{cityName}</small>
-            </div>
-          </div>
-        ) : (
-          <img
-            src={imagePath}
-            alt={`${cityName}, India`}
-            title={`${cityName}, India`}
-            className="city-image"
-            loading="lazy"
-            onError={handleImageError}
-          />
-        )}
+        <img
+          src={hasFallback ? fallbackImagePath : imagePath}
+          alt={`${cityName}, India`}
+          title={`${cityName}, India`}
+          className="city-image"
+          loading="lazy"
+          onError={handleImageError}
+        />
       </div>
 
       {showAttribution && metadata && (
