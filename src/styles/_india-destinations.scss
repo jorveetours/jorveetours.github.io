@@ -34,6 +34,24 @@
       border-color: transparent;
     }
 
+    .state-card-header {
+      background: linear-gradient(120deg, #1a73a7 0%, #0f5a8a 68%, #9c4f00 100%);
+      border-bottom: 1px solid #ffffff38;
+      padding: 16px 20px;
+      margin: -22px -22px 16px -22px;
+      border-radius: $radius-lg $radius-lg 0 0;
+
+      h3 {
+        color: $white;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: rgba($white, 0.9);
+        font-size: 0.85rem;
+      }
+    }
+
     h3 {
       font-size: 1.15rem;
       margin-bottom: 6px;

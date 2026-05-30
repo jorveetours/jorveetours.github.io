@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
+import LandmarkGallery from '../components/LandmarkGallery';
 import {
   getIndiaCityDestination,
   getIndiaCityPath,
@@ -34,7 +35,7 @@ export default function IndiaDestinationDetail() {
         path={getIndiaCityPath(city)}
       />
 
-      <div className="dest-hero india-city-hero">
+      <div className="dest-hero india-city-hero" style={{ backgroundImage: `url(${city.heroImage})` }}>
         <div className="hero-content">
           <div className="breadcrumb">
             <Link to="/">Home</Link>
@@ -129,6 +130,13 @@ export default function IndiaDestinationDetail() {
             </div>
           </div>
         </section>
+
+        <LandmarkGallery 
+          cityName={city.cityName}
+          citySlug={city.citySlug}
+          stateName={city.stateName}
+          stateSlug={city.stateSlug}
+        />
 
         <div className="dest-travel-info">
           <div className="travel-card">
