@@ -216,16 +216,38 @@ ul {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+.not-found-page {
+  min-height: calc(100vh - 240px);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 12px;
+  padding: 140px 20px 60px;
+  background: radial-gradient(circle at top, rgba($primary, 0.12), transparent 55%);
+
+  .not-found-code {
+    font-size: clamp(3rem, 12vw, 6rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $primary;
+    line-height: 1;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .not-found-copy {
+    max-width: 620px;
+    color: $text-light;
+    margin: 0 auto;
+  }
+
+  .not-found-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 }

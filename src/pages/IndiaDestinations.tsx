@@ -36,16 +36,14 @@ export default function IndiaDestinations() {
                 <article key={state.stateSlug} className="india-state-card">
                   <div className="state-card-header">
                     <h3>{state.stateName}</h3>
-                  </div>
-                  <div className="state-card-body">
                     <p>{cities.length} major cities available</p>
-                    <div className="india-city-links">
-                      {cities.map((city) => (
-                        <Link key={city.citySlug} to={getIndiaCityPath(city)}>
-                          {city.cityName}
-                        </Link>
-                      ))}
-                    </div>
+                  </div>
+                  <div className="india-city-links">
+                    {cities.map((city) => (
+                      <Link key={city.citySlug} to={getIndiaCityPath(city)}>
+                        {city.cityName}
+                      </Link>
+                    ))}
                   </div>
                 </article>
               );

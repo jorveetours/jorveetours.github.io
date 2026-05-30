@@ -31,8 +31,6 @@ interface IndiaStateSeed {
   cities: Array<{ cityName: string; tagline: string }>;
 }
 
-const heroImage = '/images/destinations/world-travel-destinations-hero-banner.jpg';
-
 const slugify = (value: string) =>
   value
     .toLowerCase()
@@ -536,7 +534,7 @@ export const indiaCityDestinations: IndiaCityDestination[] = indiaStates.flatMap
       bestTimeToTravel: stateClimateMap[state.stateSlug] || 'October to March',
       nearestAirport: `${city.cityName} Airport`,
       nearestRailway: `${city.cityName} Junction`,
-      heroImage,
+      heroImage: `/images/india/${state.stateSlug}/${citySlug}/${citySlug}.jpg`,
       culture: getCityCulture(state.stateSlug, citySlug, city.cityName, state.stateName),
     };
   })

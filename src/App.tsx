@@ -10,6 +10,7 @@ import IndiaDestinations from './pages/IndiaDestinations';
 import IndiaDestinationDetail from './pages/IndiaDestinationDetail';
 import VisaOfferings from './pages/VisaOfferings';
 import VisaDetail from './pages/VisaDetail';
+import NotFound from './pages/NotFound';
 import './styles/main.scss';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/destinations/:countrySlug/:slug" element={<DestinationDetail />} />
             <Route path="/visa" element={<VisaOfferings />} />
             <Route path="/visa/:visaSlug" element={<VisaDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
