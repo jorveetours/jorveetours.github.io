@@ -36,6 +36,89 @@ npm run build
 npm run preview
 ```
 
+## Scripts
+
+### Batch Image Downloader
+
+This script downloads images for Indian cities using either the Pexels or Pixabay API.
+
+**Setup:**
+
+1. Install dependencies (if not already):
+  ```sh
+  npm install axios
+  ```
+
+2. Get a free API key from either:
+  - [Pexels API](https://www.pexels.com/api/)
+  - [Pixabay API](https://pixabay.com/api/)
+
+**Usage:**
+
+Run with Pexels:
+```sh
+set PEXELS_API_KEY=your_key
+node scripts/batch-download.js
+```
+
+Run with Pixabay:
+```sh
+set PIXABAY_API_KEY=your_key
+node scripts/batch-download.js pixabay
+```
+
+Replace `your_key` with your actual API key.
+
+You can refer to this section any time for script usage.
+
+## Scripts Overview
+
+### batch-download.js
+Downloads images for Indian cities using either the Pexels or Pixabay API.
+- Requires API key (PEXELS_API_KEY or PIXABAY_API_KEY).
+- Usage:
+  - `set PEXELS_API_KEY=your_key && node scripts/batch-download.js`
+  - `set PIXABAY_API_KEY=your_key && node scripts/batch-download.js pixabay`
+
+### download-images-no-api.js
+Downloads Indian city images from free sources (Pexels, Pixabay, Wikimedia) with no API key required.
+- Usage:
+  - `npm install axios sharp`
+  - `node scripts/download-images-no-api.js`
+
+### download-india-city-images.js
+Downloads city images from Unsplash for all Indian cities.
+- Requires Unsplash API key (UNSPLASH_ACCESS_KEY).
+- Usage:
+  - `npm install axios sharp`
+  - `set UNSPLASH_ACCESS_KEY=your_key && node scripts/download-india-city-images.js`
+
+### download-landmarks.js
+Downloads landmark images (temples, mosques, parks, etc.) for Indian cities using Pexels API.
+- Requires PEXELS_API_KEY.
+- Usage:
+  - `npm install axios`
+  - `set PEXELS_API_KEY=your_key && node scripts/download-landmarks.js`
+
+### image-attribution.js
+Manages image attributions, licenses, and metadata. Used as a utility in code, not a standalone script.
+
+### image-optimizer.js
+Resizes and optimizes all downloaded images to 1920x1080 for web.
+- Usage:
+  - `npm install sharp`
+  - `node scripts/image-optimizer.js`
+
+### setup-guide.js
+Interactive guide for all available image setup/download methods.
+- Usage:
+  - `node scripts/setup-guide.js`
+
+### prerender.js
+Pre-renders static HTML files for each route after build for SEO.
+- Usage:
+  - `npm run build` (runs automatically as part of build process)
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
