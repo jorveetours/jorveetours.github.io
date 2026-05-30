@@ -1,6 +1,10 @@
 @use 'variables' as *;
 
 .about-page {
+  .about-hero {
+    background-image: url('/images/about/travel-adventure-hero-banner.jpg');
+  }
+
   .about-story {
     .about-grid {
       display: grid;
@@ -264,4 +268,31 @@
       }
     }
   }
+
+  .about-marquee {
+    overflow: hidden;
+    padding: 60px 0;
+    background: $light-bg;
+
+    .about-marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: aboutMarquee 20s linear infinite;
+    }
+
+    .about-marquee-text {
+      font-family: $font-heading;
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 700;
+      color: rgba($dark, 0.08);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      padding-right: 100px;
+    }
+  }
+}
+
+@keyframes aboutMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

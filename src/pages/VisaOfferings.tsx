@@ -29,10 +29,10 @@ export default function VisaOfferings() {
         </div>
       </div>
 
-      <section className="section">
+      <section className="section" aria-labelledby="visa-offerings-heading">
         <div className="container">
           <div className="section-title">
-            <h2>Choose Your Destination Country</h2>
+            <h2 id="visa-offerings-heading">Choose Your Destination Country</h2>
             <p>
               Select any country below to view basic visa requirements and start your
               application with expert support.
@@ -49,7 +49,7 @@ export default function VisaOfferings() {
               </p>
             </div>
             <a className="btn btn-secondary" href="tel:+919873440127">
-              <i className="fas fa-phone-alt"></i> Call Us for Support
+              <i className="fas fa-phone-alt" aria-hidden="true"></i> Call Us for Support
             </a>
           </div>
 
@@ -64,14 +64,14 @@ export default function VisaOfferings() {
                 <p>{visa.visaType}</p>
                 <div className="visa-meta">
                   <span>
-                    <i className="fas fa-calendar-check"></i> {visa.stayDuration}
+                    <i className="fas fa-calendar-check" aria-hidden="true"></i> {visa.stayDuration}
                   </span>
                   <span>
-                    <i className="fas fa-passport"></i> {visa.entryType}
+                    <i className="fas fa-passport" aria-hidden="true"></i> {visa.entryType}
                   </span>
                 </div>
                 <div className="explore-link">
-                  View basic requirements <i className="fas fa-arrow-right"></i>
+                  View basic requirements <i className="fas fa-arrow-right" aria-hidden="true"></i>
                 </div>
               </Link>
             ))}

@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+﻿import { useParams, Link } from 'react-router-dom';
 import { getDestination, getSisterCities, getDestinationPath } from '../data/destinations';
 import { getVisaOfferingByDestinationCountry, getVisaPath } from '../data/visaOfferings';
 import SEO from '../components/SEO';
@@ -9,10 +9,10 @@ export default function DestinationDetail() {
 
   if (!dest) {
     return (
-      <div style={{ marginTop: 120, textAlign: 'center', padding: 40 }}>
+      <div className="destination-not-found">
         <h1>Destination Not Found</h1>
         <p>Sorry, we couldn't find the destination you're looking for.</p>
-        <Link to="/destinations" className="btn btn-primary" style={{ marginTop: 20 }}>
+        <Link to="/destinations" className="btn btn-primary destination-not-found-btn">
           Browse All Destinations
         </Link>
       </div>
@@ -45,54 +45,49 @@ export default function DestinationDetail() {
           },
         }}
       />
-      {/* Hero */}
-      <div
-        className="dest-hero"
-        style={{ backgroundImage: `url(${dest.heroImage})` }}
-      >
+
+      <div className="dest-hero">
+        <img className="dest-hero-image" src={dest.heroImage} alt="" aria-hidden="true" />
         <div className="hero-content">
           <div className="breadcrumb">
             <Link to="/">Home</Link>
-            <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
+            <i className="fas fa-chevron-right breadcrumb-separator" aria-hidden="true"></i>
             <Link to="/destinations">Destinations</Link>
-            <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
+            <i className="fas fa-chevron-right breadcrumb-separator" aria-hidden="true"></i>
             <span>{dest.country}</span>
-            <i className="fas fa-chevron-right" style={{ fontSize: '0.7rem' }}></i>
+            <i className="fas fa-chevron-right breadcrumb-separator" aria-hidden="true"></i>
             <span>{dest.name}</span>
           </div>
           <h1>{dest.name}</h1>
           <div className="hero-meta">
             <div className="meta-item">
-              <i className="fas fa-map-marker-alt"></i> {dest.country}
+              <i className="fas fa-map-marker-alt" aria-hidden="true"></i> {dest.country}
             </div>
             <div className="meta-item">
-              <i className="fas fa-tag"></i> {dest.tagline}
+              <i className="fas fa-tag" aria-hidden="true"></i> {dest.tagline}
             </div>
             <div className="meta-item">
-              <i className="fas fa-plane"></i> {dest.nearestAirport.split('—')[0].trim()}
+              <i className="fas fa-plane" aria-hidden="true"></i> {dest.nearestAirport.split('—')[0].trim()}
             </div>
           </div>
         </div>
       </div>
 
       <div className="dest-content">
-        {/* About */}
-        <section className="dest-about">
-          <h2><i className="fas fa-info-circle"></i> About {dest.name}</h2>
+        <section className="dest-about" aria-labelledby="destination-about-heading">
+          <h2 id="destination-about-heading"><i className="fas fa-info-circle" aria-hidden="true"></i> About {dest.name}</h2>
           <div className="about-text">
             <p>{dest.description}</p>
           </div>
         </section>
 
-        {/* History */}
-        <section className="dest-history">
-          <h2><i className="fas fa-landmark"></i> Historic Background</h2>
+        <section className="dest-history" aria-labelledby="destination-history-heading">
+          <h2 id="destination-history-heading"><i className="fas fa-landmark" aria-hidden="true"></i> Historic Background</h2>
           <p>{dest.history}</p>
         </section>
 
-        {/* Gallery */}
-        <section className="dest-gallery">
-          <h2><i className="fas fa-camera"></i> Photo Gallery</h2>
+        <section className="dest-gallery" aria-labelledby="destination-gallery-heading">
+          <h2 id="destination-gallery-heading"><i className="fas fa-camera" aria-hidden="true"></i> Photo Gallery</h2>
           <div className="gallery-grid">
             {dest.images.map((img, index) => (
               <div key={index} className="gallery-item">
@@ -103,14 +98,13 @@ export default function DestinationDetail() {
           </div>
         </section>
 
-        {/* Places to Visit & Food */}
         <div className="dest-info-grid">
           <div className="info-card">
-            <h3><i className="fas fa-map-signs"></i> Places to Visit</h3>
+            <h3><i className="fas fa-map-signs" aria-hidden="true"></i> Places to Visit</h3>
             <ul>
               {dest.placesToVisit.map((place, i) => (
                 <li key={i}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   {place}
                 </li>
               ))}
@@ -118,11 +112,11 @@ export default function DestinationDetail() {
           </div>
 
           <div className="info-card">
-            <h3><i className="fas fa-utensils"></i> Food to Try</h3>
+            <h3><i className="fas fa-utensils" aria-hidden="true"></i> Food to Try</h3>
             <ul>
               {dest.foodToTry.map((food, i) => (
                 <li key={i}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   {food}
                 </li>
               ))}
@@ -130,14 +124,13 @@ export default function DestinationDetail() {
           </div>
         </div>
 
-        {/* Must See */}
-        <div className="dest-info-grid" style={{ gridTemplateColumns: '1fr' }}>
+        <div className="dest-info-grid dest-info-grid-single">
           <div className="info-card">
-            <h3><i className="fas fa-eye"></i> Must See Experiences</h3>
+            <h3><i className="fas fa-eye" aria-hidden="true"></i> Must See Experiences</h3>
             <ul>
               {dest.mustSee.map((item, i) => (
                 <li key={i}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   {item}
                 </li>
               ))}
@@ -145,45 +138,42 @@ export default function DestinationDetail() {
           </div>
         </div>
 
-        {/* Travel Info Cards */}
         <div className="dest-travel-info">
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-calendar-alt"></i></div>
+            <div className="icon"><i className="fas fa-calendar-alt" aria-hidden="true"></i></div>
             <h3>Best Time to Travel</h3>
             <p>{dest.bestTimeToTravel}</p>
           </div>
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-plane-departure"></i></div>
+            <div className="icon"><i className="fas fa-plane-departure" aria-hidden="true"></i></div>
             <h3>Nearest Airport</h3>
             <p>{dest.nearestAirport}</p>
           </div>
           <div className="travel-card">
-            <div className="icon"><i className="fas fa-train"></i></div>
+            <div className="icon"><i className="fas fa-train" aria-hidden="true"></i></div>
             <h3>Nearest Railway</h3>
             <p>{dest.nearestRailway}</p>
           </div>
         </div>
 
-        {/* Visa Process */}
         {visaOffering && (
-          <section className="dest-visa-cta">
+          <section className="dest-visa-cta" aria-labelledby="destination-visa-heading">
             <div className="visa-copy">
-              <h2><i className="fas fa-passport"></i> Visa for {dest.country}</h2>
+              <h2 id="destination-visa-heading"><i className="fas fa-passport" aria-hidden="true"></i> Visa for {dest.country}</h2>
               <p>
                 Planning your {dest.name} trip? Read the basic visa process, required
                 documents, and support details for {visaOffering.name}.
               </p>
             </div>
             <Link to={getVisaPath(visaOffering)} className="btn btn-secondary">
-              Read Visa Process <i className="fas fa-arrow-right"></i>
+              Read Visa Process <i className="fas fa-arrow-right" aria-hidden="true"></i>
             </Link>
           </section>
         )}
 
-        {/* Sister Cities */}
         {sisters.length > 0 && (
-          <section className="sister-cities">
-            <h2>Explore More Destinations</h2>
+          <section className="sister-cities" aria-labelledby="sister-cities-heading">
+            <h2 id="sister-cities-heading">Explore More Destinations</h2>
             <p className="sister-subtitle">
               If you love {dest.name}, you'll also enjoy these incredible cities
             </p>
@@ -210,3 +200,4 @@ export default function DestinationDetail() {
     </div>
   );
 }
+

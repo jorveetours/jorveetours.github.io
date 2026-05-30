@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-brand">
           <div className="logo">
             <div className="logo-icon">
-              <i className="fas fa-globe-americas"></i>
+              <i className="fas fa-globe-americas" aria-hidden="true"></i>
             </div>
             Jorvee <span>Tours</span>
           </div>
@@ -17,58 +17,58 @@ export default function Footer() {
             Let us turn your dream destination into a cherished memory.
           </p>
           <div className="social-links">
-            <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i className="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><i className="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter" title="Twitter"><i className="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><i className="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i className="fab fa-linkedin-in" aria-hidden="true"></i></a>
           </div>
         </div>
 
         {/* Quick Links */}
-        <div className="footer-column">
+        <nav className="footer-column" aria-label="Quick links">
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/"><i className="fas fa-chevron-right"></i> Home</Link></li>
-            <li><Link to="/about"><i className="fas fa-chevron-right"></i> About Us</Link></li>
-            <li><Link to="/destinations"><i className="fas fa-chevron-right"></i> Destinations</Link></li>
-            <li><Link to="/visa"><i className="fas fa-chevron-right"></i> Visa Offerings</Link></li>
-            <li><Link to="/#contact"><i className="fas fa-chevron-right"></i> Contact Us</Link></li>
+            <li><Link to="/"><i className="fas fa-chevron-right" aria-hidden="true"></i> Home</Link></li>
+            <li><Link to="/about"><i className="fas fa-chevron-right" aria-hidden="true"></i> About Us</Link></li>
+            <li><Link to="/destinations"><i className="fas fa-chevron-right" aria-hidden="true"></i> Destinations</Link></li>
+            <li><Link to="/visa"><i className="fas fa-chevron-right" aria-hidden="true"></i> Visa Offerings</Link></li>
+            <li><Link to="/#contact"><i className="fas fa-chevron-right" aria-hidden="true"></i> Contact Us</Link></li>
           </ul>
-        </div>
+        </nav>
 
         {/* Top Destinations */}
-        <div className="footer-column">
+        <nav className="footer-column" aria-label="Top destinations links">
           <h4>Destinations</h4>
           <ul>
-            <li><Link to="/destinations/france/paris"><i className="fas fa-chevron-right"></i> Paris</Link></li>
-            <li><Link to="/destinations/japan/tokyo"><i className="fas fa-chevron-right"></i> Tokyo</Link></li>
-            <li><Link to="/destinations/italy/rome"><i className="fas fa-chevron-right"></i> Rome</Link></li>
-            <li><Link to="/destinations/united-kingdom/london"><i className="fas fa-chevron-right"></i> London</Link></li>
-            <li><Link to="/destinations/uae/dubai"><i className="fas fa-chevron-right"></i> Dubai</Link></li>
-            <li><Link to="/destinations/usa/new-york"><i className="fas fa-chevron-right"></i> New York</Link></li>
+            <li><Link to="/destinations/france/paris"><i className="fas fa-chevron-right" aria-hidden="true"></i> Paris</Link></li>
+            <li><Link to="/destinations/japan/tokyo"><i className="fas fa-chevron-right" aria-hidden="true"></i> Tokyo</Link></li>
+            <li><Link to="/destinations/italy/rome"><i className="fas fa-chevron-right" aria-hidden="true"></i> Rome</Link></li>
+            <li><Link to="/destinations/united-kingdom/london"><i className="fas fa-chevron-right" aria-hidden="true"></i> London</Link></li>
+            <li><Link to="/destinations/uae/dubai"><i className="fas fa-chevron-right" aria-hidden="true"></i> Dubai</Link></li>
+            <li><Link to="/destinations/usa/new-york"><i className="fas fa-chevron-right" aria-hidden="true"></i> New York</Link></li>
           </ul>
-        </div>
+        </nav>
 
         {/* Services */}
-        <div className="footer-column">
+        <nav className="footer-column" aria-label="Services links">
           <h4>Services</h4>
           <ul>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Group Tours</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Private Tours</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Honeymoon Packages</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Adventure Trips</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right"></i> Corporate Travel</a></li>
-            <li><Link to="/visa"><i className="fas fa-chevron-right"></i> Visa Assistance</Link></li>
+            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Group Tours</a></li>
+            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Private Tours</a></li>
+            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Honeymoon Packages</a></li>
+            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Adventure Trips</a></li>
+            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Corporate Travel</a></li>
+            <li><Link to="/visa"><i className="fas fa-chevron-right" aria-hidden="true"></i> Visa Assistance</Link></li>
           </ul>
-        </div>
+        </nav>
 
         {/* Office Address */}
         <div className="footer-office">
           <h4>Head Office</h4>
           <div className="office-item">
             <div className="icon">
-              <i className="fas fa-map-marker-alt"></i>
+              <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
             </div>
             <div className="info">
               <h5>Address</h5>
@@ -77,25 +77,25 @@ export default function Footer() {
           </div>
           <div className="office-item">
             <div className="icon">
-              <i className="fas fa-phone-alt"></i>
+              <i className="fas fa-phone-alt" aria-hidden="true"></i>
             </div>
             <div className="info">
               <h5>Phone</h5>
-              <p>+91 9873440127<br />+91 8860821547</p>
+              <p><a href="tel:+919873440127">+91 9873440127</a><br /><a href="tel:+918860821547">+91 8860821547</a></p>
             </div>
           </div>
           <div className="office-item">
             <div className="icon">
-              <i className="fas fa-envelope"></i>
+              <i className="fas fa-envelope" aria-hidden="true"></i>
             </div>
             <div className="info">
               <h5>Email</h5>
-              <p>hello@jorveetours.com<br />support@jorveetours.com</p>
+              <p><a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a><br /><a href="mailto:support@jorveetours.com">support@jorveetours.com</a></p>
             </div>
           </div>
           <div className="office-item">
             <div className="icon">
-              <i className="fas fa-clock"></i>
+              <i className="fas fa-clock" aria-hidden="true"></i>
             </div>
             <div className="info">
               <h5>Working Hours</h5>

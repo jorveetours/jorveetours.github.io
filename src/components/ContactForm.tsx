@@ -10,11 +10,11 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact-section section" id="contact">
+    <section className="contact-section section" id="contact" aria-labelledby="contact-title">
       <div className="container">
-        <div className="section-title" style={{ position: 'relative', zIndex: 1 }}>
-          <h2 style={{ color: '#fff' }}>Get In Touch</h2>
-          <p style={{ color: 'rgba(255,255,255,0.8)' }}>
+        <div className="section-title contact-section-title">
+          <h2 id="contact-title">Get In Touch</h2>
+          <p>
             Have a question or ready to plan your dream trip? We'd love to hear from you.
           </p>
           <div className="underline"></div>
@@ -28,27 +28,27 @@ export default function ContactForm() {
             <div className="info-items">
               <div className="info-item">
                 <div className="icon">
-                  <i className="fas fa-phone"></i>
+                  <i className="fas fa-phone" aria-hidden="true"></i>
                 </div>
                 <div className="details">
                   <h4>Phone</h4>
-                  <p>+91 9873440127<br />+91 8860821547</p>
+                  <p><a href="tel:+919873440127">+91 9873440127</a><br /><a href="tel:+918860821547">+91 8860821547</a></p>
                 </div>
               </div>
 
               <div className="info-item">
                 <div className="icon">
-                  <i className="fas fa-envelope"></i>
+                  <i className="fas fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div className="details">
                   <h4>Email</h4>
-                  <p>hello@jorveetours.com</p>
+                  <p><a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a></p>
                 </div>
               </div>
 
               <div className="info-item">
                 <div className="icon">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
                 <div className="details">
                   <h4>Office</h4>
@@ -58,7 +58,7 @@ export default function ContactForm() {
 
               <div className="info-item">
                 <div className="icon">
-                  <i className="fas fa-clock"></i>
+                  <i className="fas fa-clock" aria-hidden="true"></i>
                 </div>
                 <div className="details">
                   <h4>Hours</h4>
@@ -75,19 +75,12 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" onSubmit={handleSubmit} aria-label="Contact form">
             <h3>Send a Message</h3>
 
             {submitted && (
-              <div style={{
-                background: '#d4edda',
-                color: '#155724',
-                padding: '12px 16px',
-                borderRadius: '8px',
-                marginBottom: '20px',
-                fontSize: '0.9rem'
-              }}>
-                <i className="fas fa-check-circle" style={{ marginRight: 8 }}></i>
+              <div className="form-success" role="status" aria-live="polite">
+                <i className="fas fa-check-circle" aria-hidden="true"></i>
                 Thank you! We'll be in touch soon.
               </div>
             )}
@@ -95,17 +88,17 @@ export default function ContactForm() {
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="firstName">First Name</label>
-                <input type="text" id="firstName" placeholder="John" required />
+                <input type="text" id="firstName" name="firstName" autoComplete="given-name" placeholder="John" required />
               </div>
               <div className="form-group">
                 <label htmlFor="lastName">Last Name</label>
-                <input type="text" id="lastName" placeholder="Doe" required />
+                <input type="text" id="lastName" name="lastName" autoComplete="family-name" placeholder="Doe" required />
               </div>
             </div>
 
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
+              <input type="email" id="email" name="email" autoComplete="email" placeholder="john@example.com" required />
             </div>
 
             <div className="form-group">
@@ -122,11 +115,11 @@ export default function ContactForm() {
 
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" placeholder="Tell us about your dream trip..." rows={4} required></textarea>
+              <textarea id="message" name="message" placeholder="Tell us about your dream trip..." rows={4} required></textarea>
             </div>
 
             <button type="submit" className="btn btn-primary">
-              <i className="fas fa-paper-plane"></i> Send Message
+              <i className="fas fa-paper-plane" aria-hidden="true"></i> Send Message
             </button>
           </form>
         </div>

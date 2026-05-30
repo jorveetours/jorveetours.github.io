@@ -60,9 +60,9 @@ export default function VisaDetail() {
         <div className="container">
           <div className="breadcrumb">
             <Link to="/">Home</Link>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <Link to="/visa">Visa Offerings</Link>
-            <i className="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right" aria-hidden="true"></i>
             <span>{visa.name}</span>
           </div>
           <h1>{visa.name}</h1>
@@ -71,24 +71,25 @@ export default function VisaDetail() {
       </div>
 
       <div className="container visa-detail-content">
-        <section className="visa-overview-cards">
+        <section className="visa-overview-cards" aria-labelledby="visa-overview-heading">
+          <h2 id="visa-overview-heading" className="visually-hidden">Visa Overview</h2>
           <div className="overview-card">
-            <i className="fas fa-file-signature"></i>
+            <i className="fas fa-file-signature" aria-hidden="true"></i>
             <h3>Visa Type</h3>
             <p>{visa.visaType}</p>
           </div>
           <div className="overview-card">
-            <i className="fas fa-clock"></i>
+            <i className="fas fa-clock" aria-hidden="true"></i>
             <h3>Processing Time</h3>
             <p>{visa.processingTime}</p>
           </div>
           <div className="overview-card">
-            <i className="fas fa-calendar-day"></i>
+            <i className="fas fa-calendar-day" aria-hidden="true"></i>
             <h3>Stay Duration</h3>
             <p>{visa.stayDuration}</p>
           </div>
           <div className="overview-card">
-            <i className="fas fa-user-check"></i>
+            <i className="fas fa-user-check" aria-hidden="true"></i>
             <h3>Interview</h3>
             <p>{visa.requiresInterview ? 'Usually Required' : 'Generally Not Required'}</p>
           </div>
@@ -97,12 +98,12 @@ export default function VisaDetail() {
         <section className="visa-requirements-grid">
           <article className="requirements-card">
             <h2>
-              <i className="fas fa-list-check"></i> Basic Requirements
+                <i className="fas fa-list-check" aria-hidden="true"></i> Basic Requirements
             </h2>
             <ul>
               {requirements.map((item) => (
                 <li key={item}>
-                  <i className="fas fa-check-circle"></i>
+                  <i className="fas fa-check-circle" aria-hidden="true"></i>
                   <span>{item}</span>
                 </li>
               ))}
@@ -111,12 +112,12 @@ export default function VisaDetail() {
 
           <article className="requirements-card">
             <h2>
-              <i className="fas fa-circle-info"></i> Important Notes
+                <i className="fas fa-circle-info" aria-hidden="true"></i> Important Notes
             </h2>
             <ul>
               {commonNotes.map((item) => (
                 <li key={item}>
-                  <i className="fas fa-exclamation-circle"></i>
+                  <i className="fas fa-exclamation-circle" aria-hidden="true"></i>
                   <span>{item}</span>
                 </li>
               ))}
@@ -154,10 +155,10 @@ export default function VisaDetail() {
 
           <div className="support-actions">
             <a className="btn btn-primary" href="tel:+919873440127">
-              <i className="fas fa-phone-alt"></i> Call Now
+              <i className="fas fa-phone-alt" aria-hidden="true"></i> Call Now
             </a>
             <a className="btn btn-secondary" href="mailto:support@jorveetours.com">
-              <i className="fas fa-envelope"></i> Email Support
+              <i className="fas fa-envelope" aria-hidden="true"></i> Email Support
             </a>
           </div>
         </section>
@@ -168,7 +169,7 @@ export default function VisaDetail() {
             {suggested.map((item) => (
               <Link key={item.slug} to={getVisaPath(item)} className="suggested-item">
                 <span>{item.name}</span>
-                <i className="fas fa-arrow-right"></i>
+                <i className="fas fa-arrow-right" aria-hidden="true"></i>
               </Link>
             ))}
           </div>

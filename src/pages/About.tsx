@@ -9,13 +9,7 @@ export default function About() {
         path="/about"
       />
       {/* Hero */}
-      <div
-        className="page-hero"
-        style={{
-          backgroundImage:
-            'url(/images/about/travel-adventure-hero-banner.jpg)',
-        }}
-      >
+      <div className="page-hero about-hero">
         <div className="hero-content">
           <h1>About Jorvee Tours & Travels</h1>
           <p>Your trusted partner in crafting extraordinary travel experiences since 2010</p>
@@ -60,19 +54,19 @@ export default function About() {
 
               <div className="about-features">
                 <div className="feature">
-                  <div className="icon"><i className="fas fa-globe-americas"></i></div>
+                  <div className="icon"><i className="fas fa-globe-americas" aria-hidden="true"></i></div>
                   <span>50+ Countries Covered</span>
                 </div>
                 <div className="feature">
-                  <div className="icon"><i className="fas fa-users"></i></div>
+                  <div className="icon"><i className="fas fa-users" aria-hidden="true"></i></div>
                   <span>10,000+ Happy Travelers</span>
                 </div>
                 <div className="feature">
-                  <div className="icon"><i className="fas fa-headset"></i></div>
+                  <div className="icon"><i className="fas fa-headset" aria-hidden="true"></i></div>
                   <span>24/7 Travel Support</span>
                 </div>
                 <div className="feature">
-                  <div className="icon"><i className="fas fa-shield-alt"></i></div>
+                  <div className="icon"><i className="fas fa-shield-alt" aria-hidden="true"></i></div>
                   <span>Secure & Trusted</span>
                 </div>
               </div>
@@ -92,7 +86,7 @@ export default function About() {
 
           <div className="values-grid">
             <div className="value-card">
-              <div className="icon"><i className="fas fa-heart"></i></div>
+              <div className="icon"><i className="fas fa-heart" aria-hidden="true"></i></div>
               <h3>Passion</h3>
               <p>
                 We are passionate travelers ourselves. Every destination we recommend, we've
@@ -100,7 +94,7 @@ export default function About() {
               </p>
             </div>
             <div className="value-card">
-              <div className="icon"><i className="fas fa-handshake"></i></div>
+              <div className="icon"><i className="fas fa-handshake" aria-hidden="true"></i></div>
               <h3>Trust</h3>
               <p>
                 Transparency and honesty are at the core of our business. No hidden fees, no
@@ -108,7 +102,7 @@ export default function About() {
               </p>
             </div>
             <div className="value-card">
-              <div className="icon"><i className="fas fa-leaf"></i></div>
+              <div className="icon"><i className="fas fa-leaf" aria-hidden="true"></i></div>
               <h3>Sustainability</h3>
               <p>
                 We are committed to responsible tourism that respects local communities, cultures,
@@ -116,7 +110,7 @@ export default function About() {
               </p>
             </div>
             <div className="value-card">
-              <div className="icon"><i className="fas fa-star"></i></div>
+              <div className="icon"><i className="fas fa-star" aria-hidden="true"></i></div>
               <h3>Excellence</h3>
               <p>
                 From the first inquiry to your return home, we strive for excellence in every
@@ -152,30 +146,12 @@ export default function About() {
       </section>
 
       {/* Marquee Quote */}
-      <section style={{ overflow: 'hidden', padding: '60px 0', background: '#f8f9fa' }}>
-        <div style={{
-          display: 'flex',
-          whiteSpace: 'nowrap',
-          animation: 'marquee 20s linear infinite',
-        }}>
-          <span style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: 'clamp(3rem, 8vw, 7rem)',
-            fontWeight: 700,
-            color: 'rgba(0,0,0,0.06)',
-            textTransform: 'uppercase',
-            letterSpacing: '4px',
-            paddingRight: '100px',
-          }}>
+      <section className="about-marquee" aria-label="Inspirational travel quote">
+        <div className="about-marquee-track" aria-hidden="true">
+          <span className="about-marquee-text">
             Travel is important to learn the world around you &nbsp;•&nbsp; Travel is important to learn the world around you &nbsp;•&nbsp;
           </span>
         </div>
-        <style>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
       </section>
     </div>
   );

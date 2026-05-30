@@ -25,7 +25,7 @@
     border: 1px solid $border;
     border-radius: $radius-lg;
     background: $white;
-    padding: 22px;
+    overflow: hidden;
     transition: $transition;
 
     &:hover {
@@ -57,28 +57,39 @@
       margin-bottom: 6px;
     }
 
-    p {
-      font-size: 0.88rem;
-      color: $text-muted;
-      margin-bottom: 14px;
+      h3 {
+        font-size: 1.12rem;
+        color: $white;
+        margin-bottom: 0;
+      }
     }
 
-    .india-city-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .state-card-body {
+      padding: 16px 20px 20px;
 
-      a {
-        border: 1px solid $border;
-        border-radius: 999px;
-        padding: 6px 12px;
-        font-size: 0.84rem;
-        color: $text;
+      p {
+        font-size: 0.88rem;
+        color: $text-muted;
+        margin-bottom: 14px;
+      }
 
-        &:hover {
-          color: $white;
-          background: $primary;
-          border-color: $primary;
+      .india-city-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        a {
+          border: 1px solid $border;
+          border-radius: 999px;
+          padding: 6px 12px;
+          font-size: 0.84rem;
+          color: $text;
+
+          &:hover {
+            color: $white;
+            background: $primary;
+            border-color: $primary;
+          }
         }
       }
     }
