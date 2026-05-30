@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
 import LandmarkGallery from '../components/LandmarkGallery';
@@ -6,6 +7,8 @@ import {
   getIndiaCityPath,
   getIndiaCitiesByState,
 } from '../data/indiaDestinations';
+
+const DEFAULT_FALLBACK_IMAGE = '/images/destinations/world-travel-destinations-hero-banner.jpg';
 
 export default function IndiaDestinationDetail() {
   const { stateSlug, citySlug } = useParams<{ stateSlug: string; citySlug: string }>();
@@ -27,6 +30,22 @@ export default function IndiaDestinationDetail() {
     .filter((entry) => entry.citySlug !== city.citySlug)
     .slice(0, 4);
 
+  const heroCandidates = useMemo(
+    () => [
+      city.heroImage,
+      `/images/india/${city.stateSlug}/${city.citySlug}/${city.citySlug}.jpg`,
+      `/images/india/${city.stateSlug}/${city.citySlug}/index.jpg`,
+      DEFAULT_FALLBACK_IMAGE,
+    ],
+    [city.heroImage, city.stateSlug, city.citySlug]
+  );
+
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    setHeroIndex(0);
+  }, [city.stateSlug, city.citySlug]);
+
   return (
     <div className="destination-page india-city-page">
       <SEO
@@ -35,7 +54,19 @@ export default function IndiaDestinationDetail() {
         path={getIndiaCityPath(city)}
       />
 
-      <div className="dest-hero india-city-hero" style={{ backgroundImage: `url(${city.heroImage})` }}>
+      <div className="dest-hero india-city-hero">
+        <img
+          className="dest-hero-image"
+          src={heroCandidates[heroIndex]}
+          alt={`${city.cityName}, ${city.stateName}`}
+          loading="eager"
+          fetchPriority="high"
+          onError={() => {
+            setHeroIndex((current) =>
+              current < heroCandidates.length - 1 ? current + 1 : current
+            );
+          }}
+        />
         <div className="hero-content">
           <div className="breadcrumb">
             <Link to="/">Home</Link>
@@ -163,7 +194,16 @@ export default function IndiaDestinationDetail() {
             <div className="sister-grid india-sister-grid">
               {sisterCities.map((entry) => (
                 <Link to={getIndiaCityPath(entry)} key={entry.citySlug} className="sister-card">
-                  <img src={entry.heroImage} alt={entry.cityName} loading="lazy" />
+                  <img
+                    src={entry.heroImage}
+                    alt={entry.cityName}
+                    loading="lazy"
+                    onError={(event) => {
+                      const img = event.currentTarget;
+                      if (img.src.includes('world-travel-destinations-hero-banner.jpg')) return;
+                      img.src = DEFAULT_FALLBACK_IMAGE;
+                    }}
+                  />
                   <div className="sister-overlay">
                     <div className="sister-info">
                       <span>{entry.stateName}</span>
