@@ -1569,7 +1569,7 @@ const indianCities = [
   { state: 'west-bengal', cities: [
     //{ city: 'kolkata', name: 'Kolkata' },
     //{ city: 'darjeeling', name: 'Darjeeling' },
-    { city: 'siliguri', name: 'Siliguri' },
+    //{ city: 'siliguri', name: 'Siliguri' },
     { city: 'durgapur', name: 'Durgapur' },
     { city: 'howrah', name: 'Howrah' },
     { city: 'murshidabad', name: 'Murshidabad' },
