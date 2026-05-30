@@ -1462,24 +1462,24 @@ const indianCities = [
   //   { city: 'jalandhar', name: 'Jalandhar' },
   //   { city: 'patiala', name: 'Patiala' },
   // ]},
-  { state: 'rajasthan', cities: [
-    { city: 'jaipur', name: 'Jaipur' },
-    { city: 'udaipur', name: 'Udaipur' },
-    { city: 'jodhpur', name: 'Jodhpur' },
-    { city: 'bikaner', name: 'Bikaner' },
+  // { state: 'rajasthan', cities: [
+  //   { city: 'jaipur', name: 'Jaipur' },
+  //   { city: 'udaipur', name: 'Udaipur' },
+  //   { city: 'jodhpur', name: 'Jodhpur' },
+  //   { city: 'bikaner', name: 'Bikaner' },
+  // ]},
+  // { state: 'sikkim', cities: [
+  //   { city: 'gangtok', name: 'Gangtok' },
+  //   { city: 'namchi', name: 'Namchi' },
+  //   { city: 'pelling', name: 'Pelling' },
+  //   { city: 'lachung', name: 'Lachung' },
+  // ]},
+  { state: 'tamil-nadu', cities: [
+    { city: 'chennai', name: 'Chennai' },
+    { city: 'coimbatore', name: 'Coimbatore' },
+    { city: 'madurai', name: 'Madurai' },
+    { city: 'tiruchirappalli', name: 'Tiruchirappalli' },
   ]},
-  { state: 'sikkim', cities: [
-    { city: 'gangtok', name: 'Gangtok' },
-    { city: 'namchi', name: 'Namchi' },
-    { city: 'pelling', name: 'Pelling' },
-    { city: 'lachung', name: 'Lachung' },
-  ]},
-//   { state: 'tamil-nadu', cities: [
-//     { city: 'chennai', name: 'Chennai' },
-//     { city: 'coimbatore', name: 'Coimbatore' },
-//     { city: 'madurai', name: 'Madurai' },
-//     { city: 'tiruchirappalli', name: 'Tiruchirappalli' },
-//   ]},
 //   { state: 'telangana', cities: [
 //     { city: 'hyderabad', name: 'Hyderabad' },
 //     { city: 'warangal', name: 'Warangal' },

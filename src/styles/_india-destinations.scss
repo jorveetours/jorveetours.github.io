@@ -57,44 +57,44 @@
       margin-bottom: 6px;
     }
 
-      h3 {
-        font-size: 1.12rem;
-        color: $white;
-        margin-bottom: 0;
-      }
+    h3 {
+      font-size: 1.12rem;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+
+  .state-card-body {
+    padding: 16px 20px 20px;
+
+    p {
+      font-size: 0.88rem;
+      color: $text-muted;
+      margin-bottom: 14px;
     }
 
-    .state-card-body {
-      padding: 16px 20px 20px;
+    .india-city-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
 
-      p {
-        font-size: 0.88rem;
-        color: $text-muted;
-        margin-bottom: 14px;
-      }
+      a {
+        border: 1px solid $border;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.84rem;
+        color: $text;
 
-      .india-city-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-
-        a {
-          border: 1px solid $border;
-          border-radius: 999px;
-          padding: 6px 12px;
-          font-size: 0.84rem;
-          color: $text;
-
-          &:hover {
-            color: $white;
-            background: $primary;
-            border-color: $primary;
-          }
+        &:hover {
+          color: $white;
+          background: $primary;
+          border-color: $primary;
         }
       }
     }
   }
 }
+
 
 .destinations-directory {
   .india-directory-card {
