@@ -18,7 +18,7 @@ export default function Footer() {
           </p>
           <div className="social-links">
             <a href="#" aria-label="Facebook" title="Facebook"><i className="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Instagram" title="Instagram"><i className="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/jorveetours" aria-label="Instagram" title="Instagram"><i className="fab fa-instagram" aria-hidden="true"></i></a>
             <a href="#" aria-label="Twitter" title="Twitter"><i className="fab fa-twitter" aria-hidden="true"></i></a>
             <a href="#" aria-label="YouTube" title="YouTube"><i className="fab fa-youtube" aria-hidden="true"></i></a>
             <a href="#" aria-label="LinkedIn" title="LinkedIn"><i className="fab fa-linkedin-in" aria-hidden="true"></i></a>
@@ -54,11 +54,11 @@ export default function Footer() {
         <nav className="footer-column" aria-label="Services links">
           <h4>Services</h4>
           <ul>
-            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Group Tours</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Private Tours</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Honeymoon Packages</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Adventure Trips</a></li>
-            <li><a href="#"><i className="fas fa-chevron-right" aria-hidden="true"></i> Corporate Travel</a></li>
+            <li><Link to="/services/group-tours"><i className="fas fa-chevron-right" aria-hidden="true"></i> Group Tours</Link></li>
+            <li><Link to="/services/private-tours"><i className="fas fa-chevron-right" aria-hidden="true"></i> Private Tours</Link></li>
+            <li><Link to="/services/honeymoon-packages"><i className="fas fa-chevron-right" aria-hidden="true"></i> Honeymoon Packages</Link></li>
+            <li><Link to="/services/adventure-trips"><i className="fas fa-chevron-right" aria-hidden="true"></i> Adventure Trips</Link></li>
+            <li><Link to="/services/corporate-travel"><i className="fas fa-chevron-right" aria-hidden="true"></i> Corporate Travel</Link></li>
             <li><Link to="/visa"><i className="fas fa-chevron-right" aria-hidden="true"></i> Visa Assistance</Link></li>
           </ul>
         </nav>
@@ -108,10 +108,10 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Jorvee Tours & Travels. All Rights Reserved.</p>
         <div className="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Sitemap</a>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms-of-service">Terms of Service</Link>
+          <Link to="/cookie-policy">Cookie Policy</Link>
+          <Link to="/sitemap">Sitemap</Link>
         </div>
       </div>
     </footer>

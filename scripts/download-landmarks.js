@@ -1338,6 +1338,64 @@ const landmarksByCity = {
     { name: 'Ananda Math', slug: 'ananda-math-durgapur' },
     { name: 'City Centre Durgapur', slug: 'city-centre-durgapur' },
   ],
+  'howrah': [
+  { name: 'Howrah Bridge', slug: 'howrah-bridge' },
+  { name: 'Botanical Garden', slug: 'botanical-garden-howrah' },
+  { name: 'Belur Math', slug: 'belur-math' },
+  { name: 'Santragachi Jheel', slug: 'santragachi-jheel' },
+  { name: 'Howrah Rail Museum', slug: 'howrah-rail-museum' }
+  ],
+
+  'murshidabad': [
+    { name: 'Hazarduari Palace', slug: 'hazarduari-palace' },
+    { name: 'Katra Mosque', slug: 'katra-mosque' },
+    { name: 'Nizamat Imambara', slug: 'nizamat-imambara' },
+    { name: 'Kathgola Palace', slug: 'kathgola-palace' },
+    { name: 'Motijheel', slug: 'motijheel' },
+    { name: 'Jahan Kosha Cannon', slug: 'jahan-kosha-cannon' }
+  ],
+
+  'malda': [
+    { name: 'Adina Mosque', slug: 'adina-mosque' },
+    { name: 'Gour', slug: 'gour-malda' },
+    { name: 'Firoz Minar', slug: 'firoz-minar' },
+    { name: 'Dakhil Darwaza', slug: 'dakhil-darwaza' },
+    { name: 'Ramkeli', slug: 'ramkeli' },
+    { name: 'Malda Museum', slug: 'malda-museum' }
+  ],
+
+  'bakkhali': [
+    { name: 'Bakkhali Beach', slug: 'bakkhali-beach' },
+    { name: 'Henry Island', slug: 'henry-island' },
+    { name: 'Fraserganj', slug: 'fraserganj' },
+    { name: 'Watch Tower Bakkhali', slug: 'watch-tower-bakkhali' },
+    { name: 'Crocodile Project', slug: 'crocodile-project-bakkhali' }
+  ],
+
+  'lataguri': [
+    { name: 'Gorumara National Park', slug: 'gorumara-national-park' },
+    { name: 'Chapramari Wildlife Sanctuary', slug: 'chapramari-wildlife-sanctuary' },
+    { name: 'Medla Watch Tower', slug: 'medla-watch-tower' },
+    { name: 'Jatraprasad Watch Tower', slug: 'jatraprasad-watch-tower' },
+    { name: 'Murti River', slug: 'murti-river' }
+  ],
+
+  'kalimpong': [
+    { name: 'Deolo Hill', slug: 'deolo-hill' },
+    { name: 'Durpin Monastery', slug: 'durpin-monastery' },
+    { name: 'Pine View Nursery', slug: 'pine-view-nursery' },
+    { name: 'Mangal Dham', slug: 'mangal-dham' },
+    { name: 'Morgan House', slug: 'morgan-house' },
+    { name: 'Tharpa Choling Monastery', slug: 'tharpa-choling-monastery' }
+  ],
+
+'farakka': [
+  { name: 'Farakka Barrage', slug: 'farakka-barrage' },
+  { name: 'Ganges View Point', slug: 'ganges-view-point-farakka' },
+  { name: 'Farakka Eco Park', slug: 'farakka-eco-park' },
+  { name: 'Feeder Canal', slug: 'feeder-canal-farakka' },
+  { name: 'NTPC Farakka Township', slug: 'ntpc-farakka-township' }
+]
 };
 
 // Indian cities data
@@ -1492,28 +1550,35 @@ const indianCities = [
   //   { city: 'dharmanagar', name: 'Dharmanagar' },
   //   { city: 'kailashahar', name: 'Kailashahar' },
   // ]},
-  { state: 'uttar-pradesh', cities: [
-    // { city: 'lucknow', name: 'Lucknow' },
-    // { city: 'varanasi', name: 'Varanasi' },
-    // { city: 'noida', name: 'Noida' },
-    // { city: 'gorakhpur', name: 'Gorakhpur' },
-    // { city: 'khusi-nagar', name: 'Khusi Nagar' },
-    // { city: 'kanpur', name: 'Kanpur' },
-    // { city: 'allahabad', name: 'Allahabad' },
-    { city: 'badaun', name: 'Badaun' },
+  // { state: 'uttar-pradesh', cities: [
+  //   { city: 'lucknow', name: 'Lucknow' },
+  //   { city: 'varanasi', name: 'Varanasi' },
+  //   { city: 'noida', name: 'Noida' },
+  //   { city: 'gorakhpur', name: 'Gorakhpur' },
+  //   { city: 'khusi-nagar', name: 'Khusi Nagar' },
+  //   { city: 'kanpur', name: 'Kanpur' },
+  //   { city: 'allahabad', name: 'Allahabad' },
+  //   { city: 'badaun', name: 'Badaun' },
+  // ]},
+  //{ state: 'uttarakhand', cities: [
+   // { city: 'dehradun', name: 'Dehradun' },
+    //{ city: 'nainital', name: 'Nainital' },
+    //{ city: 'haridwar', name: 'Haridwar' },
+    //{ city: 'rishikesh', name: 'Rishikesh' },
+  //]},
+  { state: 'west-bengal', cities: [
+    //{ city: 'kolkata', name: 'Kolkata' },
+    //{ city: 'darjeeling', name: 'Darjeeling' },
+    //{ city: 'siliguri', name: 'Siliguri' },
+    { city: 'durgapur', name: 'Durgapur' },
+    { city: 'howrah', name: 'Howrah' },
+    { city: 'murshidabad', name: 'Murshidabad' },
+    { city: 'malda', name: 'Malda' },
+    { city: 'bakkhali', name: 'Bakkhali' },
+    { city: 'lataguri', name: 'Lataguri' },
+    { city: 'kalimpong', name: 'Kalimpong' },
+    { city: 'farakka', name: 'Farakka' }
   ]},
-//   { state: 'uttarakhand', cities: [
-//     { city: 'dehradun', name: 'Dehradun' },
-//     { city: 'nainital', name: 'Nainital' },
-//     { city: 'haridwar', name: 'Haridwar' },
-//     { city: 'rishikesh', name: 'Rishikesh' },
-//   ]},
-//   { state: 'west-bengal', cities: [
-//     { city: 'kolkata', name: 'Kolkata' },
-//     { city: 'darjeeling', name: 'Darjeeling' },
-//     { city: 'siliguri', name: 'Siliguri' },
-//     { city: 'durgapur', name: 'Durgapur' },
-//   ]},
 ];
 
 // Download from Pexels

@@ -10,3 +10,13 @@ Host: https://jorveetours.github.io
 
 # Sitemaps
 Sitemap: https://jorveetours.github.io/sitemap.xml
+
+# LLM content index
+Allow: /llms.txt
+
+# INDIA_DESTINATIONS_START
+# India destinations (state/city pages)
+Allow: /destinations/india/
+# URL pattern: /destinations/india/{state-slug}/{city-slug}
+# Total city pages listed in sitemap: 116
+# INDIA_DESTINATIONS_END

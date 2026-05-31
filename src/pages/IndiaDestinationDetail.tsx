@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
 import LandmarkGallery from '../components/LandmarkGallery';
@@ -6,45 +6,24 @@ import {
   getIndiaCityDestination,
   getIndiaCityPath,
   getIndiaCitiesByState,
+  type IndiaCityDestination,
 } from '../data/indiaDestinations';
 
 const DEFAULT_FALLBACK_IMAGE = '/images/destinations/world-travel-destinations-hero-banner.jpg';
 
-export default function IndiaDestinationDetail() {
-  const { stateSlug, citySlug } = useParams<{ stateSlug: string; citySlug: string }>();
-  const city = getIndiaCityDestination(stateSlug || '', citySlug || '');
-
-  if (!city) {
-    return (
-      <div className="india-city-not-found">
-        <h1>City Page Not Found</h1>
-        <p>We could not find this city in our India destination directory.</p>
-        <Link to="/destinations/india" className="btn btn-primary india-city-not-found-btn">
-          Browse India Destinations
-        </Link>
-      </div>
-    );
-  }
-
+function IndiaCityDetailContent({ city }: { city: IndiaCityDestination }) {
   const sisterCities = getIndiaCitiesByState(city.stateSlug)
     .filter((entry) => entry.citySlug !== city.citySlug)
     .slice(0, 4);
 
-  const heroCandidates = useMemo(
-    () => [
-      city.heroImage,
-      `/images/india/${city.stateSlug}/${city.citySlug}/${city.citySlug}.jpg`,
-      `/images/india/${city.stateSlug}/${city.citySlug}/index.jpg`,
-      DEFAULT_FALLBACK_IMAGE,
-    ],
-    [city.heroImage, city.stateSlug, city.citySlug]
-  );
+  const heroCandidates = [
+    city.heroImage,
+    `/images/india/${city.stateSlug}/${city.citySlug}/${city.citySlug}.jpg`,
+    `/images/india/${city.stateSlug}/${city.citySlug}/index.jpg`,
+    DEFAULT_FALLBACK_IMAGE,
+  ];
 
   const [heroIndex, setHeroIndex] = useState(0);
-
-  useEffect(() => {
-    setHeroIndex(0);
-  }, [city.stateSlug, city.citySlug]);
 
   return (
     <div className="destination-page india-city-page">
@@ -218,4 +197,23 @@ export default function IndiaDestinationDetail() {
       </div>
     </div>
   );
+}
+
+export default function IndiaDestinationDetail() {
+  const { stateSlug, citySlug } = useParams<{ stateSlug: string; citySlug: string }>();
+  const city = getIndiaCityDestination(stateSlug || '', citySlug || '');
+
+  if (!city) {
+    return (
+      <div className="india-city-not-found">
+        <h1>City Page Not Found</h1>
+        <p>We could not find this city in our India destination directory.</p>
+        <Link to="/destinations/india" className="btn btn-primary india-city-not-found-btn">
+          Browse India Destinations
+        </Link>
+      </div>
+    );
+  }
+
+  return <IndiaCityDetailContent key={`${city.stateSlug}/${city.citySlug}`} city={city} />;
 }

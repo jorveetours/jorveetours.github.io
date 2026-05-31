@@ -17,6 +17,15 @@
 - Destinations Directory: https://jorveetours.github.io/destinations
 - India Destinations Directory: https://jorveetours.github.io/destinations/india
 - Visa Offerings Directory: https://jorveetours.github.io/visa
+- Group Tours: https://jorveetours.github.io/services/group-tours
+- Private Tours: https://jorveetours.github.io/services/private-tours
+- Honeymoon Packages: https://jorveetours.github.io/services/honeymoon-packages
+- Adventure Trips: https://jorveetours.github.io/services/adventure-trips
+- Corporate Travel: https://jorveetours.github.io/services/corporate-travel
+- Privacy Policy: https://jorveetours.github.io/privacy-policy
+- Terms of Service: https://jorveetours.github.io/terms-of-service
+- Cookie Policy: https://jorveetours.github.io/cookie-policy
+- HTML Sitemap: https://jorveetours.github.io/sitemap
 
 ## Destinations
 
@@ -35,6 +44,7 @@
 - Coverage: 28 Indian states with major city destination pages
 - Examples:
 	- New Delhi: https://jorveetours.github.io/destinations/india/delhi/new-delhi
+	- Visakhapatnam: https://jorveetours.github.io/destinations/india/andhra-pradesh/visakhapatnam
 	- Mumbai: https://jorveetours.github.io/destinations/india/maharashtra/mumbai
 	- Chennai: https://jorveetours.github.io/destinations/india/tamil-nadu/chennai
 	- Bengaluru: https://jorveetours.github.io/destinations/india/karnataka/bengaluru
@@ -44,6 +54,14 @@
 	- Lucknow: https://jorveetours.github.io/destinations/india/uttar-pradesh/lucknow
 	- Varanasi: https://jorveetours.github.io/destinations/india/uttar-pradesh/varanasi
 	- Khusi Nagar: https://jorveetours.github.io/destinations/india/uttar-pradesh/khusi-nagar
+	- Noida: https://jorveetours.github.io/destinations/india/uttar-pradesh/noida
+	- Kanpur: https://jorveetours.github.io/destinations/india/uttar-pradesh/kanpur
+	- Allahabad: https://jorveetours.github.io/destinations/india/uttar-pradesh/allahabad
+	- Badaun: https://jorveetours.github.io/destinations/india/uttar-pradesh/badaun
+	- Dehradun: https://jorveetours.github.io/destinations/india/uttarakhand/dehradun
+	- Nainital: https://jorveetours.github.io/destinations/india/uttarakhand/nainital
+	- Haridwar: https://jorveetours.github.io/destinations/india/uttarakhand/haridwar
+	- Rishikesh: https://jorveetours.github.io/destinations/india/uttarakhand/rishikesh
 
 ## Visa Pages
 
@@ -118,3 +136,124 @@ Each destination page includes:
 - Best time to travel
 - Nearest airport and railway station
 - Related sister cities to explore
+
+
+<!-- INDIA_CITY_URLS_START -->
+### All India City Destination URLs
+- https://jorveetours.github.io/destinations/india/andhra-pradesh/visakhapatnam
+- https://jorveetours.github.io/destinations/india/andhra-pradesh/vijayawada
+- https://jorveetours.github.io/destinations/india/andhra-pradesh/tirupati
+- https://jorveetours.github.io/destinations/india/andhra-pradesh/kurnool
+- https://jorveetours.github.io/destinations/india/arunachal-pradesh/itanagar
+- https://jorveetours.github.io/destinations/india/arunachal-pradesh/tawang
+- https://jorveetours.github.io/destinations/india/arunachal-pradesh/pasighat
+- https://jorveetours.github.io/destinations/india/arunachal-pradesh/ziro
+- https://jorveetours.github.io/destinations/india/assam/guwahati
+- https://jorveetours.github.io/destinations/india/assam/dibrugarh
+- https://jorveetours.github.io/destinations/india/assam/silchar
+- https://jorveetours.github.io/destinations/india/assam/jorhat
+- https://jorveetours.github.io/destinations/india/bihar/patna
+- https://jorveetours.github.io/destinations/india/bihar/gaya
+- https://jorveetours.github.io/destinations/india/bihar/muzaffarpur
+- https://jorveetours.github.io/destinations/india/bihar/bhagalpur
+- https://jorveetours.github.io/destinations/india/chhattisgarh/raipur
+- https://jorveetours.github.io/destinations/india/chhattisgarh/jagdalpur
+- https://jorveetours.github.io/destinations/india/chhattisgarh/bilaspur
+- https://jorveetours.github.io/destinations/india/chhattisgarh/durg
+- https://jorveetours.github.io/destinations/india/goa/panaji
+- https://jorveetours.github.io/destinations/india/goa/margao
+- https://jorveetours.github.io/destinations/india/goa/vasco-da-gama
+- https://jorveetours.github.io/destinations/india/goa/mapusa
+- https://jorveetours.github.io/destinations/india/gujarat/ahmedabad
+- https://jorveetours.github.io/destinations/india/gujarat/surat
+- https://jorveetours.github.io/destinations/india/gujarat/vadodara
+- https://jorveetours.github.io/destinations/india/gujarat/rajkot
+- https://jorveetours.github.io/destinations/india/haryana/gurugram
+- https://jorveetours.github.io/destinations/india/haryana/faridabad
+- https://jorveetours.github.io/destinations/india/haryana/panipat
+- https://jorveetours.github.io/destinations/india/haryana/karnal
+- https://jorveetours.github.io/destinations/india/himachal-pradesh/shimla
+- https://jorveetours.github.io/destinations/india/himachal-pradesh/dharamshala
+- https://jorveetours.github.io/destinations/india/himachal-pradesh/manali
+- https://jorveetours.github.io/destinations/india/himachal-pradesh/kullu
+- https://jorveetours.github.io/destinations/india/jharkhand/ranchi
+- https://jorveetours.github.io/destinations/india/jharkhand/jamshedpur
+- https://jorveetours.github.io/destinations/india/jharkhand/dhanbad
+- https://jorveetours.github.io/destinations/india/jharkhand/deoghar
+- https://jorveetours.github.io/destinations/india/karnataka/bengaluru
+- https://jorveetours.github.io/destinations/india/karnataka/mysuru
+- https://jorveetours.github.io/destinations/india/karnataka/mangaluru
+- https://jorveetours.github.io/destinations/india/karnataka/hubballi
+- https://jorveetours.github.io/destinations/india/kerala/kochi
+- https://jorveetours.github.io/destinations/india/kerala/thiruvananthapuram
+- https://jorveetours.github.io/destinations/india/kerala/kozhikode
+- https://jorveetours.github.io/destinations/india/kerala/alappuzha
+- https://jorveetours.github.io/destinations/india/madhya-pradesh/bhopal
+- https://jorveetours.github.io/destinations/india/madhya-pradesh/indore
+- https://jorveetours.github.io/destinations/india/madhya-pradesh/gwalior
+- https://jorveetours.github.io/destinations/india/madhya-pradesh/jabalpur
+- https://jorveetours.github.io/destinations/india/maharashtra/mumbai
+- https://jorveetours.github.io/destinations/india/maharashtra/pune
+- https://jorveetours.github.io/destinations/india/maharashtra/nagpur
+- https://jorveetours.github.io/destinations/india/maharashtra/nashik
+- https://jorveetours.github.io/destinations/india/manipur/imphal
+- https://jorveetours.github.io/destinations/india/manipur/churachandpur
+- https://jorveetours.github.io/destinations/india/manipur/thoubal
+- https://jorveetours.github.io/destinations/india/manipur/bishnupur
+- https://jorveetours.github.io/destinations/india/meghalaya/shillong
+- https://jorveetours.github.io/destinations/india/meghalaya/tura
+- https://jorveetours.github.io/destinations/india/meghalaya/cherrapunji
+- https://jorveetours.github.io/destinations/india/meghalaya/jowai
+- https://jorveetours.github.io/destinations/india/mizoram/aizawl
+- https://jorveetours.github.io/destinations/india/mizoram/lunglei
+- https://jorveetours.github.io/destinations/india/mizoram/champhai
+- https://jorveetours.github.io/destinations/india/mizoram/serchhip
+- https://jorveetours.github.io/destinations/india/nagaland/kohima
+- https://jorveetours.github.io/destinations/india/nagaland/dimapur
+- https://jorveetours.github.io/destinations/india/nagaland/mokokchung
+- https://jorveetours.github.io/destinations/india/nagaland/mon
+- https://jorveetours.github.io/destinations/india/odisha/bhubaneswar
+- https://jorveetours.github.io/destinations/india/odisha/puri
+- https://jorveetours.github.io/destinations/india/odisha/cuttack
+- https://jorveetours.github.io/destinations/india/odisha/rourkela
+- https://jorveetours.github.io/destinations/india/punjab/amritsar
+- https://jorveetours.github.io/destinations/india/punjab/ludhiana
+- https://jorveetours.github.io/destinations/india/punjab/jalandhar
+- https://jorveetours.github.io/destinations/india/punjab/patiala
+- https://jorveetours.github.io/destinations/india/rajasthan/jaipur
+- https://jorveetours.github.io/destinations/india/rajasthan/udaipur
+- https://jorveetours.github.io/destinations/india/rajasthan/jodhpur
+- https://jorveetours.github.io/destinations/india/rajasthan/bikaner
+- https://jorveetours.github.io/destinations/india/sikkim/gangtok
+- https://jorveetours.github.io/destinations/india/sikkim/namchi
+- https://jorveetours.github.io/destinations/india/sikkim/pelling
+- https://jorveetours.github.io/destinations/india/sikkim/lachung
+- https://jorveetours.github.io/destinations/india/tamil-nadu/chennai
+- https://jorveetours.github.io/destinations/india/tamil-nadu/coimbatore
+- https://jorveetours.github.io/destinations/india/tamil-nadu/madurai
+- https://jorveetours.github.io/destinations/india/tamil-nadu/tiruchirappalli
+- https://jorveetours.github.io/destinations/india/telangana/hyderabad
+- https://jorveetours.github.io/destinations/india/telangana/warangal
+- https://jorveetours.github.io/destinations/india/telangana/nizamabad
+- https://jorveetours.github.io/destinations/india/telangana/karimnagar
+- https://jorveetours.github.io/destinations/india/tripura/agartala
+- https://jorveetours.github.io/destinations/india/tripura/udaipur
+- https://jorveetours.github.io/destinations/india/tripura/dharmanagar
+- https://jorveetours.github.io/destinations/india/tripura/kailashahar
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/lucknow
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/varanasi
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/noida
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/gorakhpur
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/khusi-nagar
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/kanpur
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/allahabad
+- https://jorveetours.github.io/destinations/india/uttar-pradesh/badaun
+- https://jorveetours.github.io/destinations/india/uttarakhand/dehradun
+- https://jorveetours.github.io/destinations/india/uttarakhand/nainital
+- https://jorveetours.github.io/destinations/india/uttarakhand/haridwar
+- https://jorveetours.github.io/destinations/india/uttarakhand/rishikesh
+- https://jorveetours.github.io/destinations/india/west-bengal/kolkata
+- https://jorveetours.github.io/destinations/india/west-bengal/darjeeling
+- https://jorveetours.github.io/destinations/india/west-bengal/siliguri
+- https://jorveetours.github.io/destinations/india/west-bengal/durgapur
+<!-- INDIA_CITY_URLS_END -->
