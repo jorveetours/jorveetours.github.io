@@ -176,6 +176,60 @@ const routes = [
     description:
       'Explore country-wise visa services and basic requirements with guided support from Jorvee Tours & Travels.',
   },
+  {
+    path: '/privacy-policy',
+    title: 'Privacy Policy',
+    description:
+      'Understand how Jorvee Tours & Travels collects, uses, and protects personal information on our website and travel support channels.',
+  },
+  {
+    path: '/terms-of-service',
+    title: 'Terms of Service',
+    description:
+      'Review the website usage terms, service scope, and general legal conditions for Jorvee Tours & Travels.',
+  },
+  {
+    path: '/cookie-policy',
+    title: 'Cookie Policy',
+    description:
+      'Learn how cookies and similar technologies are used to improve browsing performance and user experience.',
+  },
+  {
+    path: '/sitemap',
+    title: 'Sitemap',
+    description:
+      'Quickly navigate key pages including destinations, visa offerings, and policy documents.',
+  },
+  {
+    path: '/services/group-tours',
+    title: 'Group Tours',
+    description:
+      'Explore curated group tour packages with guided sightseeing, fixed departures, and end-to-end support.',
+  },
+  {
+    path: '/services/private-tours',
+    title: 'Private Tours',
+    description:
+      'Discover private tour packages designed around your pace, preferences, and comfort with personalized planning.',
+  },
+  {
+    path: '/services/honeymoon-packages',
+    title: 'Honeymoon Packages',
+    description:
+      'Plan romantic honeymoon holidays with handpicked stays, couple experiences, and complete travel coordination.',
+  },
+  {
+    path: '/services/adventure-trips',
+    title: 'Adventure Trips',
+    description:
+      'Choose adventure trip packages combining active experiences, natural landscapes, and safe itinerary planning.',
+  },
+  {
+    path: '/services/corporate-travel',
+    title: 'Corporate Travel',
+    description:
+      'Corporate travel solutions for teams and executives with policy-friendly bookings and reliable logistics.',
+  },
 ];
 
 for (const slug of visaSlugs) {
