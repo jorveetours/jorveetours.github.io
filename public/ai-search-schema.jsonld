@@ -1,0 +1,244 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "TravelAgency"],
+      "@id": "https://jorveetours.github.io/#organization",
+      "name": "Jorvee Tours & Travels",
+      "url": "https://jorveetours.github.io/",
+      "email": "hello@jorveetours.com",
+      "telephone": ["+91 9873440127", "+91 8860821547"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Delhi",
+        "postalCode": "110025",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "India" },
+        { "@type": "Place", "name": "Worldwide" }
+      ],
+      "knowsAbout": [
+        "International tours",
+        "India travel",
+        "Visa assistance",
+        "Group tours",
+        "Private tours",
+        "Honeymoon packages",
+        "Adventure trips",
+        "Corporate travel"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+91 9873440127",
+          "email": "jorveetours@gmail.com",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi", "es", "fr"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jorveetours.github.io/#website",
+      "url": "https://jorveetours.github.io/",
+      "name": "Jorvee Tours & Travels",
+      "publisher": {
+        "@id": "https://jorveetours.github.io/#organization"
+      },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": "https://jorveetours.github.io/sitemap"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jorveetours.github.io/#homepage",
+      "url": "https://jorveetours.github.io/",
+      "name": "Jorvee Tours & Travels - Travel Packages, Destinations, and Visa Services",
+      "isPartOf": {
+        "@id": "https://jorveetours.github.io/#website"
+      },
+      "about": {
+        "@id": "https://jorveetours.github.io/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://jorveetours.github.io/images/carousel/hero-1.jpg"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://jorveetours.github.io/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://jorveetours.github.io/#service-catalog",
+      "name": "Travel and Visa Services",
+      "url": "https://jorveetours.github.io/services/group-tours",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Group Tours",
+            "url": "https://jorveetours.github.io/services/group-tours"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Private Tours",
+            "url": "https://jorveetours.github.io/services/private-tours"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Honeymoon Packages",
+            "url": "https://jorveetours.github.io/services/honeymoon-packages"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Adventure Trips",
+            "url": "https://jorveetours.github.io/services/adventure-trips"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corporate Travel",
+            "url": "https://jorveetours.github.io/services/corporate-travel"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Visa Assistance",
+            "url": "https://jorveetours.github.io/visa"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jorveetours.github.io/#featured-destinations",
+      "name": "Featured Destinations",
+      "url": "https://jorveetours.github.io/destinations",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Paris",
+            "url": "https://jorveetours.github.io/destinations/france/paris"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Tokyo",
+            "url": "https://jorveetours.github.io/destinations/japan/tokyo"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Rome",
+            "url": "https://jorveetours.github.io/destinations/italy/rome"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "London",
+            "url": "https://jorveetours.github.io/destinations/united-kingdom/london"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Dubai",
+            "url": "https://jorveetours.github.io/destinations/uae/dubai"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "New York",
+            "url": "https://jorveetours.github.io/destinations/usa/new-york"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Istanbul",
+            "url": "https://jorveetours.github.io/destinations/turkey/istanbul"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "TouristDestination",
+            "name": "Sydney",
+            "url": "https://jorveetours.github.io/destinations/australia/sydney"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "DataFeed",
+      "@id": "https://jorveetours.github.io/#crawl-feed",
+      "name": "Machine-Readable Travel Content Feed",
+      "description": "Structured endpoints for AI and search crawlers.",
+      "dataFeedElement": [
+        {
+          "@type": "DataFeedItem",
+          "dateModified": "2026-05-31",
+          "item": "https://jorveetours.github.io/llms.txt"
+        },
+        {
+          "@type": "DataFeedItem",
+          "dateModified": "2026-05-31",
+          "item": "https://jorveetours.github.io/sitemap.xml"
+        },
+        {
+          "@type": "DataFeedItem",
+          "dateModified": "2026-05-31",
+          "item": "https://jorveetours.github.io/ai-search-schema.jsonld"
+        }
+      ]
+    }
+  ]
+}

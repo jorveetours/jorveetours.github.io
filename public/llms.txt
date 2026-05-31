@@ -123,6 +123,7 @@
 ## SEO Signals
 - Primary sitemap: https://jorveetours.github.io/sitemap.xml
 - LLM content index: https://jorveetours.github.io/llms.txt
+- JSON-LD schema graph: https://jorveetours.github.io/ai-search-schema.jsonld
 - Canonical domain: https://jorveetours.github.io
 
 ## About Our Destination Pages

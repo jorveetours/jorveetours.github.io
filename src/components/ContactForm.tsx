@@ -42,7 +42,10 @@ export default function ContactForm() {
                 </div>
                 <div className="details">
                   <h4>Email</h4>
-                  <p><a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a></p>
+                  <p>
+                    <a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a>
+                    <a href="mailto:jorveetours@gmail.com">jorveetours@gmail.com</a>
+                  </p>
                 </div>
               </div>
 
