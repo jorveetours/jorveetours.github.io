@@ -90,7 +90,10 @@ export default function Footer() {
             </div>
             <div className="info">
               <h5>Email</h5>
-              <p><a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a><br /><a href="mailto:support@jorveetours.com">support@jorveetours.com</a></p>
+              <p>
+                <a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a><br />
+                <a href="mailto:jorveetours@gmail.com">jorveetours@gmail.com</a>
+              </p>
             </div>
           </div>
           <div className="office-item">
