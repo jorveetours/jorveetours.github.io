@@ -144,7 +144,7 @@ export default function VisaDetail() {
               <h4>Email</h4>
               <p>
                 <a href="mailto:hello@jorveetours.com">hello@jorveetours.com</a><br />
-                <a href="mailto:support@jorveetours.com">support@jorveetours.com</a>
+                <a href="mailto:jorveetours@gmail.com">jorveetours@gmail.com</a>
               </p>
             </div>
             <div>
@@ -157,7 +157,7 @@ export default function VisaDetail() {
             <a className="btn btn-primary" href="tel:+919873440127">
               <i className="fas fa-phone-alt" aria-hidden="true"></i> Call Now
             </a>
-            <a className="btn btn-secondary" href="mailto:support@jorveetours.com">
+            <a className="btn btn-secondary" href="mailto:jorveetours@gmail.com">
               <i className="fas fa-envelope" aria-hidden="true"></i> Email Support
             </a>
           </div>
